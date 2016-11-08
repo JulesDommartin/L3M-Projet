@@ -53,7 +53,7 @@
                 n°1 ce jour là.
                 Lors de la dernière visite, l'intervenant doit aussi enlever les 25 points de suture de son opération.
                 -->
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="002">
                     <acte id="109"/>               
                 </visite>
                 
@@ -101,7 +101,7 @@
                 jour et injection intraveineuse directe isolée d'anthalgiques les 
                 autres jours.
                 -->
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="003">
                     <acte id="101"/>
                     <acte id="104"/>               
                 </visite>
@@ -149,5 +149,5 @@
                 </visite>
                 
         </patient>
-        </patients>
+        <patient><nom>Dommartin</nom><prénom>Jules</prénom><numéro>19508246591213</numéro><sexe/><naissance/><visite date="2014-12-08" intervenant="003"/><adresse><étage>4</étage><numéro>4</numéro><rue>Etienne Forest</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient><patient><nom>Dommartin</nom><prénom>Jules</prénom><numéro>1354934646232</numéro><sexe/><naissance/><visite date="2014-12-08" intervenant="001"/><adresse><étage>4</étage><numéro>4</numéro><rue>Etienne Forest</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient></patients>
     </cabinet>

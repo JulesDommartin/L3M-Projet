@@ -21,7 +21,10 @@
             '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
             // other libraries
             'rxjs':                       'npm:rxjs',
-            'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api'
+            'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+            'moment': 'node_modules/moment/moment.js',
+            'ng2-bootstrap/ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
+            'angular2-google-maps/core': 'npm:angular2-google-maps/core'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -34,6 +37,10 @@
             },
             'angular2-in-memory-web-api': {
                 main: './index.js',
+                defaultExtension: 'js'
+            },
+            'angular2-google-maps/core': {
+                main: 'index.js',
                 defaultExtension: 'js'
             }
         }
