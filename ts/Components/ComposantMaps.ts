@@ -74,7 +74,7 @@ export class ComposantMaps implements OnInit {
                 if (obj.types.indexOf("postal_code") !== -1) {
                     this.adresse.codePostal = obj.long_name;
                 }
-                if (obj.types.indexOf("locality") !== -1 || obj.types.indexOf("political") !== -1) {
+                if (obj.types.indexOf("locality") !== -1) {
                     this.adresse.ville = obj.long_name;
                 }
             }
