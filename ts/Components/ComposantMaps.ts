@@ -1,8 +1,10 @@
-import {Component, OnInit, Input} from "@angular/core";
+import {Component, OnInit, Input, ViewChild, ElementRef} from "@angular/core";
 import { MapsAPILoader } from "angular2-google-maps/core";
 import {ComposantSecretaire} from "./ComposantSecretaire";
 
 const htmlTemplate = `
+    <input name="adresse" placeholder="Ex: 4 rue du Bout Guesdon 14100 IFS" #searchAdress>
+    <input type="button" value="Rechercher" (click)="search()"><br/>
     <div class="map">
     </div>
 `;
@@ -11,12 +13,13 @@ const htmlTemplate = `
     template	: htmlTemplate
 })
 export class ComposantMaps implements OnInit {
-    @Input() composantSecretaire    : ComposantSecretaire;
-    adresse                         : any = {};
-    geocoder                        : google.maps.Geocoder;
-    map                             : google.maps.Map;
-    infoWindow                      : google.maps.InfoWindow;
-    marker                          : google.maps.Marker;
+    @Input() composantSecretaire            : ComposantSecretaire;
+    adresse                                 : any = {};
+    geocoder                                : google.maps.Geocoder;
+    map                                     : google.maps.Map;
+    infoWindow                              : google.maps.InfoWindow;
+    marker                                  : google.maps.Marker;
+    @ViewChild("searchAdress") searchAdress : ElementRef;
     constructor(private __loader: MapsAPILoader) {
     }
     ngOnInit() {
@@ -77,6 +80,31 @@ export class ComposantMaps implements OnInit {
             }
         }
         this.composantSecretaire.setAdresse(this.adresse);
+    }
+
+
+    public search() {
+        if (this.searchAdress.nativeElement.value) {
+            let address : string = this.searchAdress.nativeElement.value;
+            this.geocoder.geocode( { "address": address}, (results, status) => {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    console.log(results);
+                    if (this.marker) {
+                        this.marker.setMap(null);
+                    }
+                    this.marker = new google.maps.Marker({
+                        position    : results[0].geometry.location,
+                        map         : this.map
+                    });
+                    this.map.setCenter(results[0].geometry.location);
+                    this.infoWindow.setContent(results[0].formatted_address);
+                    this.infoWindow.open(this.map, this.marker);
+                    this.setPatientInfos(results[0]);
+                } else {
+                    console.log("Error - ", results, " & Status - ", status);
+                }
+            });
+        }
     }
 
 }

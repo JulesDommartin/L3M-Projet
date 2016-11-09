@@ -157,4 +157,23 @@ export class ServiceCabinetMedical {
         return this._http.post( "./addPatient", body ).toPromise().then( () => body );
     }
 
+    getPatientById(numero: string): Promise<PatientInterface> {
+        return this.getData("/data/cabinetInfirmier.xml").then(( res ) => {
+            let cabinet     : CabinetInterface = res;
+            let patients    : PatientInterface[] = cabinet.patientsNonAffectes;
+
+            cabinet.infirmiers.forEach((value) => {
+                patients = patients.concat(value.patients);
+            });
+            if (patients.filter((value) => {return value.numeroSecuriteSociale === numero;}).length === 0) {
+                return undefined;
+            } else {
+                return patients.filter((value) => {return value.numeroSecuriteSociale === numero;})[0];
+            }
+        })
+            .catch(( err ) => {
+                console.log(err);
+            });
+    }
+
 }

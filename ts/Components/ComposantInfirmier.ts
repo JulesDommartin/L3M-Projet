@@ -1,5 +1,7 @@
 import * as NF from "@Services/cabinetMedicalService";
 import {Component, Input} from "@angular/core";
+import {PatientInterface} from "@Services/cabinetMedicalService";
+import {Router} from "@angular/router";
 
 const htmlTemplate = `
     <div class="infirmier">
@@ -16,7 +18,10 @@ const htmlTemplate = `
                     <th>Prénom</th>
                     <th>Numéro de sécu</th>
                 </tr>
-                <tr class="patient-infirmier" *ngFor="let patient of infirmier.patients" [alx-draggable]="patient">
+                <tr class="patient-infirmier" 
+                        (click)="onClick(patient)" 
+                        *ngFor="let patient of infirmier.patients" 
+                        [alx-draggable]="patient">
                     <td>{{patient.nom}}</td>
                     <td>{{patient.prenom}}</td>
                     <td>{{patient.numeroSecuriteSociale}}</td>
@@ -30,7 +35,14 @@ const htmlTemplate = `
     template	: htmlTemplate
 })
 export class ComposantInfirmier {
-    @Input() infirmier : NF.InfirmierInterface;
+    @Input() infirmier  : NF.InfirmierInterface;
+
+    constructor(private router : Router) {}
+
+    onClick(patient: PatientInterface) {
+        this.router.navigate(["/patient", patient.numeroSecuriteSociale]);
+    }
+
 }
 
 

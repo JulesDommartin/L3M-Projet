@@ -3,12 +3,12 @@ import { BrowserModule }            from "@angular/platform-browser";
 import { platformBrowserDynamic }   from "@angular/platform-browser-dynamic";
 
 import { CabinetMedicalModule }     from "./cabinetMedicalModule";
-import { ComposantSecretaire }      from "./Components/ComposantSecretaire";
+import { ComposantApp }             from "./Components/ComposantApp";
 
 @NgModule({
     imports     : [ BrowserModule, CabinetMedicalModule ],
     declarations: [],
-    bootstrap   : [ ComposantSecretaire ]
+    bootstrap   : [ ComposantApp ]
 })
 export class AppModule {}
 

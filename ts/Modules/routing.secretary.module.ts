@@ -5,7 +5,10 @@ import { ComposantSecretaire } from "../Components/ComposantSecretaire";
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: "secretaire",  component: ComposantSecretaire },
+            {
+                path: "secretaire",
+                component: ComposantSecretaire
+            }
         ])
     ],
     exports: [

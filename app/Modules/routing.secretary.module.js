@@ -30,7 +30,10 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
                 core_1.NgModule({
                     imports: [
                         router_1.RouterModule.forChild([
-                            { path: "secretaire", component: ComposantSecretaire_1.ComposantSecretaire },
+                            {
+                                path: "secretaire",
+                                component: ComposantSecretaire_1.ComposantSecretaire
+                            }
                         ])
                     ],
                     exports: [
@@ -44,4 +47,4 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
     }
 });
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1vZHVsZXMvcm91dGluZy5zZWNyZXRhcnkubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBY0E7WUFBcUMsQ0FBQztZQVZ0QztnQkFBQyxlQUFRLENBQUM7b0JBQ04sT0FBTyxFQUFFO3dCQUNMLHFCQUFZLENBQUMsUUFBUSxDQUFDOzRCQUNsQixFQUFFLElBQUksRUFBRSxZQUFZLEVBQUcsU0FBUyxFQUFFLHlDQUFtQixFQUFFO3lCQUMxRCxDQUFDO3FCQUNMO29CQUNELE9BQU8sRUFBRTt3QkFDTCxxQkFBWTtxQkFDZjtpQkFDSixDQUFDOztzQ0FBQTtZQUNGLDJEQUFzQyxDQUFBIiwiZmlsZSI6Ik1vZHVsZXMvcm91dGluZy5zZWNyZXRhcnkubW9kdWxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSAgICAgZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcclxuaW1wb3J0IHsgUm91dGVyTW9kdWxlIH0gZnJvbSBcIkBhbmd1bGFyL3JvdXRlclwiO1xyXG5pbXBvcnQgeyBDb21wb3NhbnRTZWNyZXRhaXJlIH0gZnJvbSBcIi4uL0NvbXBvbmVudHMvQ29tcG9zYW50U2VjcmV0YWlyZVwiO1xyXG5cclxuQE5nTW9kdWxlKHtcclxuICAgIGltcG9ydHM6IFtcclxuICAgICAgICBSb3V0ZXJNb2R1bGUuZm9yQ2hpbGQoW1xyXG4gICAgICAgICAgICB7IHBhdGg6IFwic2VjcmV0YWlyZVwiLCAgY29tcG9uZW50OiBDb21wb3NhbnRTZWNyZXRhaXJlIH0sXHJcbiAgICAgICAgXSlcclxuICAgIF0sXHJcbiAgICBleHBvcnRzOiBbXHJcbiAgICAgICAgUm91dGVyTW9kdWxlXHJcbiAgICBdXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBTZWNyZXRhcnlSb3V0aW5nTW9kdWxlIHt9XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1vZHVsZXMvcm91dGluZy5zZWNyZXRhcnkubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBaUJBO1lBQXFDLENBQUM7WUFidEM7Z0JBQUMsZUFBUSxDQUFDO29CQUNOLE9BQU8sRUFBRTt3QkFDTCxxQkFBWSxDQUFDLFFBQVEsQ0FBQzs0QkFDbEI7Z0NBQ0ksSUFBSSxFQUFFLFlBQVk7Z0NBQ2xCLFNBQVMsRUFBRSx5Q0FBbUI7NkJBQ2pDO3lCQUNKLENBQUM7cUJBQ0w7b0JBQ0QsT0FBTyxFQUFFO3dCQUNMLHFCQUFZO3FCQUNmO2lCQUNKLENBQUM7O3NDQUFBO1lBQ0YsMkRBQXNDLENBQUEiLCJmaWxlIjoiTW9kdWxlcy9yb3V0aW5nLnNlY3JldGFyeS5tb2R1bGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9ICAgICBmcm9tIFwiQGFuZ3VsYXIvY29yZVwiO1xyXG5pbXBvcnQgeyBSb3V0ZXJNb2R1bGUgfSBmcm9tIFwiQGFuZ3VsYXIvcm91dGVyXCI7XHJcbmltcG9ydCB7IENvbXBvc2FudFNlY3JldGFpcmUgfSBmcm9tIFwiLi4vQ29tcG9uZW50cy9Db21wb3NhbnRTZWNyZXRhaXJlXCI7XHJcblxyXG5ATmdNb2R1bGUoe1xyXG4gICAgaW1wb3J0czogW1xyXG4gICAgICAgIFJvdXRlck1vZHVsZS5mb3JDaGlsZChbXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIHBhdGg6IFwic2VjcmV0YWlyZVwiLFxyXG4gICAgICAgICAgICAgICAgY29tcG9uZW50OiBDb21wb3NhbnRTZWNyZXRhaXJlXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBdKVxyXG4gICAgXSxcclxuICAgIGV4cG9ydHM6IFtcclxuICAgICAgICBSb3V0ZXJNb2R1bGVcclxuICAgIF1cclxufSlcclxuZXhwb3J0IGNsYXNzIFNlY3JldGFyeVJvdXRpbmdNb2R1bGUge31cclxuIl0sInNvdXJjZVJvb3QiOiIifQ==

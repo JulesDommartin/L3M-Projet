@@ -6,7 +6,6 @@ import {PatientInterface} from "@Services/cabinetMedicalService";
 import {NgForm} from "@angular/forms";
 
 const htmlTemplate = `
-    <h1 alx-dragdrop>IHM de la secrétaire</h1>
     <p *ngIf="!initDone">CHARGEMENT...</p>
     <section *ngIf="initDone && !addPatient" class="cabinet">
         <h2>Mon beau cabinet médical</h2>
@@ -61,8 +60,7 @@ const htmlTemplate = `
                 <tr>
                     <td class="label-input">Adresse : </td>
                     <td>
-                        <input name="adresse" required><br/>
-                            <composant-maps [composantSecretaire]="this"></composant-maps>
+                        <composant-maps [composantSecretaire]="this"></composant-maps>
                     </td>
                 </tr>
                 <tr>
@@ -97,8 +95,7 @@ const htmlTemplate = `
     </section>
 `;
 @Component({
-    selector	: "composant-secretaire",
-    template	: htmlTemplate,
+    template	: htmlTemplate
 })
 export class ComposantSecretaire implements OnInit {
     @ViewChild("patientStreet")         patientStreet       : ElementRef;

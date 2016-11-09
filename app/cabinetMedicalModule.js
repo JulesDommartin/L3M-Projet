@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDrop/DragDropModule", "@angular/http", "./Components/ComposantSecretaire", "./Components/ComposantPatient", "./Components/ComposantInfirmier", "@Services/cabinetMedicalService", "./Components/ComposantMaps", "./Modules/routing.module", "./Modules/routing.secretary.module", "angular2-google-maps/core"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDrop/DragDropModule", "@angular/http", "./Components/ComposantApp", "./Components/ComposantSecretaire", "./Components/ComposantPatient", "./Components/ComposantOnlyPatient", "./Components/ComposantInfirmier", "./Components/ComposantMaps", "@Services/cabinetMedicalService", "./Modules/routing.module", "angular2-google-maps/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDr
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, forms_1, DragDropModule_1, http_1, ComposantSecretaire_1, ComposantPatient_1, ComposantInfirmier_1, cabinetMedicalService_1, ComposantMaps_1, routing_module_1, routing_secretary_module_1, core_2;
+    var core_1, common_1, forms_1, DragDropModule_1, http_1, ComposantApp_1, ComposantSecretaire_1, ComposantPatient_1, ComposantOnlyPatient_1, ComposantInfirmier_1, ComposantMaps_1, cabinetMedicalService_1, routing_module_1, core_2;
     var CabinetMedicalModule;
     return {
         setters:[
@@ -29,26 +29,29 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDr
             function (http_1_1) {
                 http_1 = http_1_1;
             },
+            function (ComposantApp_1_1) {
+                ComposantApp_1 = ComposantApp_1_1;
+            },
             function (ComposantSecretaire_1_1) {
                 ComposantSecretaire_1 = ComposantSecretaire_1_1;
             },
             function (ComposantPatient_1_1) {
                 ComposantPatient_1 = ComposantPatient_1_1;
             },
+            function (ComposantOnlyPatient_1_1) {
+                ComposantOnlyPatient_1 = ComposantOnlyPatient_1_1;
+            },
             function (ComposantInfirmier_1_1) {
                 ComposantInfirmier_1 = ComposantInfirmier_1_1;
-            },
-            function (cabinetMedicalService_1_1) {
-                cabinetMedicalService_1 = cabinetMedicalService_1_1;
             },
             function (ComposantMaps_1_1) {
                 ComposantMaps_1 = ComposantMaps_1_1;
             },
+            function (cabinetMedicalService_1_1) {
+                cabinetMedicalService_1 = cabinetMedicalService_1_1;
+            },
             function (routing_module_1_1) {
                 routing_module_1 = routing_module_1_1;
-            },
-            function (routing_secretary_module_1_1) {
-                routing_secretary_module_1 = routing_secretary_module_1_1;
             },
             function (core_2_1) {
                 core_2 = core_2_1;
@@ -58,11 +61,27 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDr
             };
             CabinetMedicalModule = __decorate([
                 core_1.NgModule({
-                    imports: [common_1.CommonModule, forms_1.FormsModule, DragDropModule_1.DragDropModule, http_1.HttpModule, routing_module_1.AppRoutingModule, routing_secretary_module_1.SecretaryRoutingModule, core_2.AgmCoreModule.forRoot({
+                    imports: [
+                        common_1.CommonModule,
+                        forms_1.FormsModule,
+                        DragDropModule_1.DragDropModule,
+                        http_1.HttpModule,
+                        routing_module_1.AppRoutingModule,
+                        //PatientsRoutingModule,
+                        //SecretaryRoutingModule,
+                        core_2.AgmCoreModule.forRoot({
                             apiKey: "AIzaSyCsJZjpW-blWWGv7DlYQSe3O9NEftzpan4"
-                        })],
-                    exports: [ComposantSecretaire_1.ComposantSecretaire],
-                    declarations: [ComposantSecretaire_1.ComposantSecretaire, ComposantPatient_1.ComposantPatient, ComposantInfirmier_1.ComposantInfirmier, ComposantMaps_1.ComposantMaps],
+                        })
+                    ],
+                    exports: [routing_module_1.AppRoutingModule],
+                    declarations: [
+                        ComposantApp_1.ComposantApp,
+                        ComposantSecretaire_1.ComposantSecretaire,
+                        ComposantPatient_1.ComposantPatient,
+                        ComposantOnlyPatient_1.ComposantOnlyPatient,
+                        ComposantInfirmier_1.ComposantInfirmier,
+                        ComposantMaps_1.ComposantMaps
+                    ],
                     providers: [cabinetMedicalService_1.ServiceCabinetMedical],
                 }), 
                 __metadata('design:paramtypes', [])
@@ -72,4 +91,4 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "./DragDr
     }
 });
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhYmluZXRNZWRpY2FsTW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBeUJBO1lBQW9DLENBQUM7WUFUckM7Z0JBQUMsZUFBUSxDQUFDO29CQUNOLE9BQU8sRUFBTyxDQUFFLHFCQUFZLEVBQUUsbUJBQVcsRUFBRSwrQkFBYyxFQUFFLGlCQUFVLEVBQUUsaUNBQWdCLEVBQUUsaURBQXNCLEVBQUUsb0JBQWEsQ0FBQyxPQUFPLENBQUM7NEJBQ25JLE1BQU0sRUFBRSx5Q0FBeUM7eUJBQ3BELENBQUMsQ0FBRTtvQkFDSixPQUFPLEVBQU8sQ0FBRSx5Q0FBbUIsQ0FBRTtvQkFDckMsWUFBWSxFQUFFLENBQUUseUNBQW1CLEVBQUUsbUNBQWdCLEVBQUUsdUNBQWtCLEVBQUUsNkJBQWEsQ0FBRTtvQkFDMUYsU0FBUyxFQUFLLENBQUUsNkNBQXFCLENBQUU7aUJBRTFDLENBQUM7O29DQUFBO1lBQ0YsdURBQXFDLENBQUEiLCJmaWxlIjoiY2FiaW5ldE1lZGljYWxNb2R1bGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9ICAgICAgICAgICAgICAgICBmcm9tIFwiQGFuZ3VsYXIvY29yZVwiO1xuaW1wb3J0IHsgQ29tbW9uTW9kdWxlIH0gICAgICAgICAgICAgZnJvbSBcIkBhbmd1bGFyL2NvbW1vblwiO1xuaW1wb3J0IHsgRm9ybXNNb2R1bGUgIH0gICAgICAgICAgICAgZnJvbSBcIkBhbmd1bGFyL2Zvcm1zXCI7XG5pbXBvcnQgeyBEcmFnRHJvcE1vZHVsZSB9ICAgICAgICAgICBmcm9tIFwiLi9EcmFnRHJvcC9EcmFnRHJvcE1vZHVsZVwiO1xuaW1wb3J0IHsgSHR0cE1vZHVsZSB9ICAgICAgICAgICAgICAgZnJvbSBcIkBhbmd1bGFyL2h0dHBcIjtcblxuaW1wb3J0IHsgQ29tcG9zYW50U2VjcmV0YWlyZSB9ICAgICAgZnJvbSBcIi4vQ29tcG9uZW50cy9Db21wb3NhbnRTZWNyZXRhaXJlXCI7XG5pbXBvcnQgeyBDb21wb3NhbnRQYXRpZW50IH0gICAgICAgICBmcm9tIFwiLi9Db21wb25lbnRzL0NvbXBvc2FudFBhdGllbnRcIjtcbmltcG9ydCB7IENvbXBvc2FudEluZmlybWllciB9ICAgICAgIGZyb20gXCIuL0NvbXBvbmVudHMvQ29tcG9zYW50SW5maXJtaWVyXCI7XG5pbXBvcnQgeyBTZXJ2aWNlQ2FiaW5ldE1lZGljYWwgfSAgICBmcm9tIFwiQFNlcnZpY2VzL2NhYmluZXRNZWRpY2FsU2VydmljZVwiO1xuaW1wb3J0IHsgQ29tcG9zYW50TWFwcyB9ICAgICAgICAgICAgZnJvbSBcIi4vQ29tcG9uZW50cy9Db21wb3NhbnRNYXBzXCI7XG5pbXBvcnQgeyBBcHBSb3V0aW5nTW9kdWxlIH0gICAgICAgICBmcm9tIFwiLi9Nb2R1bGVzL3JvdXRpbmcubW9kdWxlXCI7XG5pbXBvcnQgeyBTZWNyZXRhcnlSb3V0aW5nTW9kdWxlIH0gICBmcm9tIFwiLi9Nb2R1bGVzL3JvdXRpbmcuc2VjcmV0YXJ5Lm1vZHVsZVwiO1xuXG5pbXBvcnQgeyBBZ21Db3JlTW9kdWxlIH0gICAgICAgICAgICBmcm9tIFwiYW5ndWxhcjItZ29vZ2xlLW1hcHMvY29yZVwiO1xuXG5ATmdNb2R1bGUoe1xuICAgIGltcG9ydHMgICAgIDogWyBDb21tb25Nb2R1bGUsIEZvcm1zTW9kdWxlLCBEcmFnRHJvcE1vZHVsZSwgSHR0cE1vZHVsZSwgQXBwUm91dGluZ01vZHVsZSwgU2VjcmV0YXJ5Um91dGluZ01vZHVsZSwgQWdtQ29yZU1vZHVsZS5mb3JSb290KHtcbiAgICAgICAgYXBpS2V5OiBcIkFJemFTeUNzSlpqcFctYmxXV0d2N0RsWVFTZTNPOU5FZnR6cGFuNFwiXG4gICAgfSkgXSxcbiAgICBleHBvcnRzICAgICA6IFsgQ29tcG9zYW50U2VjcmV0YWlyZSBdLFxuICAgIGRlY2xhcmF0aW9uczogWyBDb21wb3NhbnRTZWNyZXRhaXJlLCBDb21wb3NhbnRQYXRpZW50LCBDb21wb3NhbnRJbmZpcm1pZXIsIENvbXBvc2FudE1hcHMgXSxcbiAgICBwcm92aWRlcnMgICA6IFsgU2VydmljZUNhYmluZXRNZWRpY2FsIF0sXG5cbn0pXG5leHBvcnQgY2xhc3MgQ2FiaW5ldE1lZGljYWxNb2R1bGUgeyB9XG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhYmluZXRNZWRpY2FsTW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBOENBO1lBQW9DLENBQUM7WUF6QnJDO2dCQUFDLGVBQVEsQ0FBQztvQkFDTixPQUFPLEVBQU87d0JBQ1YscUJBQVk7d0JBQ1osbUJBQVc7d0JBQ1gsK0JBQWM7d0JBQ2QsaUJBQVU7d0JBQ1YsaUNBQWdCO3dCQUNoQix3QkFBd0I7d0JBQ3hCLHlCQUF5Qjt3QkFDekIsb0JBQWEsQ0FBQyxPQUFPLENBQUM7NEJBQ2xCLE1BQU0sRUFBRSx5Q0FBeUM7eUJBQ3BELENBQUM7cUJBQ0w7b0JBQ0QsT0FBTyxFQUFPLENBQUUsaUNBQWdCLENBQUU7b0JBQ2xDLFlBQVksRUFBRTt3QkFDViwyQkFBWTt3QkFDWix5Q0FBbUI7d0JBQ25CLG1DQUFnQjt3QkFDaEIsMkNBQW9CO3dCQUNwQix1Q0FBa0I7d0JBQ2xCLDZCQUFhO3FCQUNoQjtvQkFDRCxTQUFTLEVBQUssQ0FBRSw2Q0FBcUIsQ0FBRTtpQkFFMUMsQ0FBQzs7b0NBQUE7WUFDRix1REFBcUMsQ0FBQSIsImZpbGUiOiJjYWJpbmV0TWVkaWNhbE1vZHVsZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gICAgICAgICAgICAgICAgIGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSAgICAgICAgICAgICBmcm9tIFwiQGFuZ3VsYXIvY29tbW9uXCI7XG5pbXBvcnQgeyBGb3Jtc01vZHVsZSAgfSAgICAgICAgICAgICBmcm9tIFwiQGFuZ3VsYXIvZm9ybXNcIjtcbmltcG9ydCB7IERyYWdEcm9wTW9kdWxlIH0gICAgICAgICAgIGZyb20gXCIuL0RyYWdEcm9wL0RyYWdEcm9wTW9kdWxlXCI7XG5pbXBvcnQgeyBIdHRwTW9kdWxlIH0gICAgICAgICAgICAgICBmcm9tIFwiQGFuZ3VsYXIvaHR0cFwiO1xuXG5pbXBvcnQgeyBDb21wb3NhbnRBcHAgfSAgICAgICAgICAgICBmcm9tIFwiLi9Db21wb25lbnRzL0NvbXBvc2FudEFwcFwiO1xuaW1wb3J0IHsgQ29tcG9zYW50U2VjcmV0YWlyZSB9ICAgICAgZnJvbSBcIi4vQ29tcG9uZW50cy9Db21wb3NhbnRTZWNyZXRhaXJlXCI7XG5pbXBvcnQgeyBDb21wb3NhbnRQYXRpZW50IH0gICAgICAgICBmcm9tIFwiLi9Db21wb25lbnRzL0NvbXBvc2FudFBhdGllbnRcIjtcbmltcG9ydCB7IENvbXBvc2FudE9ubHlQYXRpZW50IH0gICAgIGZyb20gXCIuL0NvbXBvbmVudHMvQ29tcG9zYW50T25seVBhdGllbnRcIjtcbmltcG9ydCB7IENvbXBvc2FudEluZmlybWllciB9ICAgICAgIGZyb20gXCIuL0NvbXBvbmVudHMvQ29tcG9zYW50SW5maXJtaWVyXCI7XG5pbXBvcnQgeyBDb21wb3NhbnRNYXBzIH0gICAgICAgICAgICBmcm9tIFwiLi9Db21wb25lbnRzL0NvbXBvc2FudE1hcHNcIjtcblxuaW1wb3J0IHsgU2VydmljZUNhYmluZXRNZWRpY2FsIH0gICAgZnJvbSBcIkBTZXJ2aWNlcy9jYWJpbmV0TWVkaWNhbFNlcnZpY2VcIjtcblxuaW1wb3J0IHsgQXBwUm91dGluZ01vZHVsZSB9ICAgICAgICAgZnJvbSBcIi4vTW9kdWxlcy9yb3V0aW5nLm1vZHVsZVwiO1xuLy9pbXBvcnQgeyBTZWNyZXRhcnlSb3V0aW5nTW9kdWxlIH0gICBmcm9tIFwiLi9Nb2R1bGVzL3JvdXRpbmcuc2VjcmV0YXJ5Lm1vZHVsZVwiO1xuLy9pbXBvcnQgeyBQYXRpZW50c1JvdXRpbmdNb2R1bGUgfSAgICBmcm9tIFwiLi9Nb2R1bGVzL3JvdXRpbmcucGF0aWVudHMubW9kdWxlXCI7XG5cbmltcG9ydCB7IEFnbUNvcmVNb2R1bGUgfSAgICAgICAgICAgIGZyb20gXCJhbmd1bGFyMi1nb29nbGUtbWFwcy9jb3JlXCI7XG5cbkBOZ01vZHVsZSh7XG4gICAgaW1wb3J0cyAgICAgOiBbXG4gICAgICAgIENvbW1vbk1vZHVsZSxcbiAgICAgICAgRm9ybXNNb2R1bGUsXG4gICAgICAgIERyYWdEcm9wTW9kdWxlLFxuICAgICAgICBIdHRwTW9kdWxlLFxuICAgICAgICBBcHBSb3V0aW5nTW9kdWxlLFxuICAgICAgICAvL1BhdGllbnRzUm91dGluZ01vZHVsZSxcbiAgICAgICAgLy9TZWNyZXRhcnlSb3V0aW5nTW9kdWxlLFxuICAgICAgICBBZ21Db3JlTW9kdWxlLmZvclJvb3Qoe1xuICAgICAgICAgICAgYXBpS2V5OiBcIkFJemFTeUNzSlpqcFctYmxXV0d2N0RsWVFTZTNPOU5FZnR6cGFuNFwiXG4gICAgICAgIH0pXG4gICAgXSxcbiAgICBleHBvcnRzICAgICA6IFsgQXBwUm91dGluZ01vZHVsZSBdLFxuICAgIGRlY2xhcmF0aW9uczogW1xuICAgICAgICBDb21wb3NhbnRBcHAsXG4gICAgICAgIENvbXBvc2FudFNlY3JldGFpcmUsXG4gICAgICAgIENvbXBvc2FudFBhdGllbnQsXG4gICAgICAgIENvbXBvc2FudE9ubHlQYXRpZW50LFxuICAgICAgICBDb21wb3NhbnRJbmZpcm1pZXIsXG4gICAgICAgIENvbXBvc2FudE1hcHNcbiAgICBdLFxuICAgIHByb3ZpZGVycyAgIDogWyBTZXJ2aWNlQ2FiaW5ldE1lZGljYWwgXSxcblxufSlcbmV4cG9ydCBjbGFzcyBDYWJpbmV0TWVkaWNhbE1vZHVsZSB7IH1cbiJdLCJzb3VyY2VSb290IjoiIn0=
