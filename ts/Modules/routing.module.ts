@@ -2,6 +2,7 @@ import { NgModule }     from "@angular/core";
 import { RouterModule } from "@angular/router";
 import {ComposantSecretaire} from "../Components/ComposantSecretaire";
 import {ComposantOnlyPatient} from "../Components/ComposantOnlyPatient";
+import {ComposantAddPatient} from "../Components/ComposantAddPatient";
 
 @NgModule({
     imports: [
@@ -18,6 +19,10 @@ import {ComposantOnlyPatient} from "../Components/ComposantOnlyPatient";
             {
                 path: "patient/:numero",
                 component: ComposantOnlyPatient
+            },
+            {
+                path: "addPatient",
+                component: ComposantAddPatient
             }
         ])
     ],

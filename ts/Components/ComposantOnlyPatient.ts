@@ -14,7 +14,7 @@ const htmlTemplate = `
 @Component({
     template	: htmlTemplate
 })
-export class ComposantOnlyPatient implements OnInit{
+export class ComposantOnlyPatient implements OnInit {
     numero  : string;
     patient : PatientInterface;
     initDone: boolean = false;

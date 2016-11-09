@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, ViewChild, ElementRef} from "@angular/core";
 import { MapsAPILoader } from "angular2-google-maps/core";
-import {ComposantSecretaire} from "./ComposantSecretaire";
+import {ComposantAddPatient} from "./ComposantAddPatient";
 
 const htmlTemplate = `
     <input name="adresse" placeholder="Ex: 4 rue du Bout Guesdon 14100 IFS" #searchAdress>
@@ -13,7 +13,7 @@ const htmlTemplate = `
     template	: htmlTemplate
 })
 export class ComposantMaps implements OnInit {
-    @Input() composantSecretaire            : ComposantSecretaire;
+    @Input() composantAddPatient            : ComposantAddPatient;
     adresse                                 : any = {};
     geocoder                                : google.maps.Geocoder;
     map                                     : google.maps.Map;
@@ -79,7 +79,7 @@ export class ComposantMaps implements OnInit {
                 }
             }
         }
-        this.composantSecretaire.setAdresse(this.adresse);
+        this.composantAddPatient.setAdresse(this.adresse);
     }
 
 

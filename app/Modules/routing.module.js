@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/router", "../Components/ComposantSecretaire", "../Components/ComposantOnlyPatient"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/router", "../Components/ComposantSecretaire", "../Components/ComposantOnlyPatient", "../Components/ComposantAddPatient"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, ComposantSecretaire_1, ComposantOnlyPatient_1;
+    var core_1, router_1, ComposantSecretaire_1, ComposantOnlyPatient_1, ComposantAddPatient_1;
     var AppRoutingModule;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
             },
             function (ComposantOnlyPatient_1_1) {
                 ComposantOnlyPatient_1 = ComposantOnlyPatient_1_1;
+            },
+            function (ComposantAddPatient_1_1) {
+                ComposantAddPatient_1 = ComposantAddPatient_1_1;
             }],
         execute: function() {
             AppRoutingModule = class AppRoutingModule {
@@ -45,6 +48,10 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
                             {
                                 path: "patient/:numero",
                                 component: ComposantOnlyPatient_1.ComposantOnlyPatient
+                            },
+                            {
+                                path: "addPatient",
+                                component: ComposantAddPatient_1.ComposantAddPatient
                             }
                         ])
                     ],
@@ -59,4 +66,4 @@ System.register(["@angular/core", "@angular/router", "../Components/ComposantSec
     }
 });
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1vZHVsZXMvcm91dGluZy5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUEyQkE7WUFBK0IsQ0FBQztZQXRCaEM7Z0JBQUMsZUFBUSxDQUFDO29CQUNOLE9BQU8sRUFBRTt3QkFDTCxxQkFBWSxDQUFDLE9BQU8sQ0FBQzs0QkFDakI7Z0NBQ0ksSUFBSSxFQUFFLEVBQUU7Z0NBQ1IsVUFBVSxFQUFFLGFBQWE7Z0NBQ3pCLFNBQVMsRUFBRSxNQUFNOzZCQUNwQjs0QkFDRDtnQ0FDSSxJQUFJLEVBQUUsWUFBWTtnQ0FDbEIsU0FBUyxFQUFFLHlDQUFtQjs2QkFDakM7NEJBQ0Q7Z0NBQ0ksSUFBSSxFQUFFLGlCQUFpQjtnQ0FDdkIsU0FBUyxFQUFFLDJDQUFvQjs2QkFDbEM7eUJBQ0osQ0FBQztxQkFDTDtvQkFDRCxPQUFPLEVBQUU7d0JBQ0wscUJBQVk7cUJBQ2Y7aUJBQ0osQ0FBQzs7Z0NBQUE7WUFDRiwrQ0FBZ0MsQ0FBQSIsImZpbGUiOiJNb2R1bGVzL3JvdXRpbmcubW9kdWxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSAgICAgZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcbmltcG9ydCB7IFJvdXRlck1vZHVsZSB9IGZyb20gXCJAYW5ndWxhci9yb3V0ZXJcIjtcbmltcG9ydCB7Q29tcG9zYW50U2VjcmV0YWlyZX0gZnJvbSBcIi4uL0NvbXBvbmVudHMvQ29tcG9zYW50U2VjcmV0YWlyZVwiO1xuaW1wb3J0IHtDb21wb3NhbnRPbmx5UGF0aWVudH0gZnJvbSBcIi4uL0NvbXBvbmVudHMvQ29tcG9zYW50T25seVBhdGllbnRcIjtcblxuQE5nTW9kdWxlKHtcbiAgICBpbXBvcnRzOiBbXG4gICAgICAgIFJvdXRlck1vZHVsZS5mb3JSb290KFtcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBwYXRoOiBcIlwiLFxuICAgICAgICAgICAgICAgIHJlZGlyZWN0VG86IFwiL3NlY3JldGFpcmVcIixcbiAgICAgICAgICAgICAgICBwYXRoTWF0Y2g6IFwiZnVsbFwiXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHBhdGg6IFwic2VjcmV0YWlyZVwiLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogQ29tcG9zYW50U2VjcmV0YWlyZVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBwYXRoOiBcInBhdGllbnQvOm51bWVyb1wiLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogQ29tcG9zYW50T25seVBhdGllbnRcbiAgICAgICAgICAgIH1cbiAgICAgICAgXSlcbiAgICBdLFxuICAgIGV4cG9ydHM6IFtcbiAgICAgICAgUm91dGVyTW9kdWxlXG4gICAgXVxufSlcbmV4cG9ydCBjbGFzcyBBcHBSb3V0aW5nTW9kdWxlIHt9XG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1vZHVsZXMvcm91dGluZy5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUFnQ0E7WUFBK0IsQ0FBQztZQTFCaEM7Z0JBQUMsZUFBUSxDQUFDO29CQUNOLE9BQU8sRUFBRTt3QkFDTCxxQkFBWSxDQUFDLE9BQU8sQ0FBQzs0QkFDakI7Z0NBQ0ksSUFBSSxFQUFFLEVBQUU7Z0NBQ1IsVUFBVSxFQUFFLGFBQWE7Z0NBQ3pCLFNBQVMsRUFBRSxNQUFNOzZCQUNwQjs0QkFDRDtnQ0FDSSxJQUFJLEVBQUUsWUFBWTtnQ0FDbEIsU0FBUyxFQUFFLHlDQUFtQjs2QkFDakM7NEJBQ0Q7Z0NBQ0ksSUFBSSxFQUFFLGlCQUFpQjtnQ0FDdkIsU0FBUyxFQUFFLDJDQUFvQjs2QkFDbEM7NEJBQ0Q7Z0NBQ0ksSUFBSSxFQUFFLFlBQVk7Z0NBQ2xCLFNBQVMsRUFBRSx5Q0FBbUI7NkJBQ2pDO3lCQUNKLENBQUM7cUJBQ0w7b0JBQ0QsT0FBTyxFQUFFO3dCQUNMLHFCQUFZO3FCQUNmO2lCQUNKLENBQUM7O2dDQUFBO1lBQ0YsK0NBQWdDLENBQUEiLCJmaWxlIjoiTW9kdWxlcy9yb3V0aW5nLm1vZHVsZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gICAgIGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XG5pbXBvcnQgeyBSb3V0ZXJNb2R1bGUgfSBmcm9tIFwiQGFuZ3VsYXIvcm91dGVyXCI7XG5pbXBvcnQge0NvbXBvc2FudFNlY3JldGFpcmV9IGZyb20gXCIuLi9Db21wb25lbnRzL0NvbXBvc2FudFNlY3JldGFpcmVcIjtcbmltcG9ydCB7Q29tcG9zYW50T25seVBhdGllbnR9IGZyb20gXCIuLi9Db21wb25lbnRzL0NvbXBvc2FudE9ubHlQYXRpZW50XCI7XG5pbXBvcnQge0NvbXBvc2FudEFkZFBhdGllbnR9IGZyb20gXCIuLi9Db21wb25lbnRzL0NvbXBvc2FudEFkZFBhdGllbnRcIjtcblxuQE5nTW9kdWxlKHtcbiAgICBpbXBvcnRzOiBbXG4gICAgICAgIFJvdXRlck1vZHVsZS5mb3JSb290KFtcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBwYXRoOiBcIlwiLFxuICAgICAgICAgICAgICAgIHJlZGlyZWN0VG86IFwiL3NlY3JldGFpcmVcIixcbiAgICAgICAgICAgICAgICBwYXRoTWF0Y2g6IFwiZnVsbFwiXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHBhdGg6IFwic2VjcmV0YWlyZVwiLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogQ29tcG9zYW50U2VjcmV0YWlyZVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBwYXRoOiBcInBhdGllbnQvOm51bWVyb1wiLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogQ29tcG9zYW50T25seVBhdGllbnRcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgcGF0aDogXCJhZGRQYXRpZW50XCIsXG4gICAgICAgICAgICAgICAgY29tcG9uZW50OiBDb21wb3NhbnRBZGRQYXRpZW50XG4gICAgICAgICAgICB9XG4gICAgICAgIF0pXG4gICAgXSxcbiAgICBleHBvcnRzOiBbXG4gICAgICAgIFJvdXRlck1vZHVsZVxuICAgIF1cbn0pXG5leHBvcnQgY2xhc3MgQXBwUm91dGluZ01vZHVsZSB7fVxuIl0sInNvdXJjZVJvb3QiOiIifQ==

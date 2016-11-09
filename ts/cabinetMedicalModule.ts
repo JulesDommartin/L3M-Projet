@@ -10,6 +10,7 @@ import { ComposantPatient }         from "./Components/ComposantPatient";
 import { ComposantOnlyPatient }     from "./Components/ComposantOnlyPatient";
 import { ComposantInfirmier }       from "./Components/ComposantInfirmier";
 import { ComposantMaps }            from "./Components/ComposantMaps";
+import { ComposantAddPatient }      from "./Components/ComposantAddPatient";
 
 import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
@@ -39,7 +40,8 @@ import { AgmCoreModule }            from "angular2-google-maps/core";
         ComposantPatient,
         ComposantOnlyPatient,
         ComposantInfirmier,
-        ComposantMaps
+        ComposantMaps,
+        ComposantAddPatient
     ],
     providers   : [ ServiceCabinetMedical ],
 
