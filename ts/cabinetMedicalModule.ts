@@ -15,10 +15,13 @@ import { ComposantAddPatient }      from "./Components/ComposantAddPatient";
 import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
 import { AppRoutingModule }         from "./Modules/routing.module";
-//import { SecretaryRoutingModule }   from "./Modules/routing.secretary.module";
-//import { PatientsRoutingModule }    from "./Modules/routing.patients.module";
 
 import { AgmCoreModule }            from "angular2-google-maps/core";
+import { ReactiveFormsModule }      from "@angular/forms";
+import {
+    LocationStrategy,
+    HashLocationStrategy
+} from "@angular/common";
 
 @NgModule({
     imports     : [
@@ -27,8 +30,7 @@ import { AgmCoreModule }            from "angular2-google-maps/core";
         DragDropModule,
         HttpModule,
         AppRoutingModule,
-        //PatientsRoutingModule,
-        //SecretaryRoutingModule,
+        ReactiveFormsModule,
         AgmCoreModule.forRoot({
             apiKey: "AIzaSyCsJZjpW-blWWGv7DlYQSe3O9NEftzpan4"
         })
@@ -43,7 +45,7 @@ import { AgmCoreModule }            from "angular2-google-maps/core";
         ComposantMaps,
         ComposantAddPatient
     ],
-    providers   : [ ServiceCabinetMedical ],
+    providers   : [ ServiceCabinetMedical, {provide: LocationStrategy, useClass: HashLocationStrategy} ]
 
 })
 export class CabinetMedicalModule { }
