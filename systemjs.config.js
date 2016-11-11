@@ -24,7 +24,8 @@
             'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
             'moment': 'node_modules/moment/moment.js',
             'ng2-bootstrap/ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
-            'angular2-google-maps/core': 'npm:angular2-google-maps/core'
+            'angular2-google-maps/core': 'npm:angular2-google-maps/core',
+            'angular2-fontawesome': 'node_modules/angular2-fontawesome'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -41,6 +42,9 @@
             },
             'angular2-google-maps/core': {
                 main: 'index.js',
+                defaultExtension: 'js'
+            },
+            'angular2-fontawesome': {
                 defaultExtension: 'js'
             }
         }

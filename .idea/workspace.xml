@@ -2,24 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5ab7b1-5694-4390-b0be-0b284046ef4d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Components/ComposantApp.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Modules/routing.patients.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Components/ComposantAddPatient.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/Views/edit.patient.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ts/Modules/routing.patients.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantApp.js" afterPath="$PROJECT_DIR$/app/Components/ComposantApp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" afterPath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantMaps.js" afterPath="$PROJECT_DIR$/app/Components/ComposantMaps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" afterPath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantSecretaire.js" afterPath="$PROJECT_DIR$/app/Components/ComposantSecretaire.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/routing.module.js" afterPath="$PROJECT_DIR$/app/Modules/routing.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/routing.patients.module.js" afterPath="$PROJECT_DIR$/app/Modules/routing.patients.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/routing.secretary.module.js" afterPath="$PROJECT_DIR$/app/Modules/routing.secretary.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/cabinetMedicalService.js" afterPath="$PROJECT_DIR$/app/Services/cabinetMedicalService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cabinetMedicalModule.js" afterPath="$PROJECT_DIR$/app/cabinetMedicalModule.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/secretary.js" afterPath="$PROJECT_DIR$/app/secretary.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/secretary.css" afterPath="$PROJECT_DIR$/css/secretary.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/cabinetInfirmier.xml" afterPath="$PROJECT_DIR$/data/cabinetInfirmier.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/secretary.html" afterPath="$PROJECT_DIR$/secretary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/systemjs.config.js" afterPath="$PROJECT_DIR$/systemjs.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Modules/routing.module.ts" afterPath="$PROJECT_DIR$/ts/Modules/routing.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts" afterPath="$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" afterPath="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" afterPath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/secretary.ts" afterPath="$PROJECT_DIR$/ts/secretary.ts" />
@@ -45,47 +56,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ComposantSecretaire.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts">
+      <file leaf-file-name="ComposantAddPatient.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
-                <marker date="1478656690463" expanded="true" signature="485:1493" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="784:1217" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1356:1469" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1546:4317" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1651:4302" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1739:4274" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1760:1917" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="1938:2090" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2111:2288" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2309:2677" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2391:2655" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2460:2629" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2698:2918" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2783:2896" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="2939:3108" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3129:3320" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3341:3496" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3517:3702" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3723:3890" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3932:4251" ph="..." />
-                <marker date="1478656690463" expanded="true" signature="3987:4229" ph="..." />
+                <element signature="e#0#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComposantMaps.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComposantMaps.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+            <state relative-caret-position="17">
+              <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
               <folding>
-                <element signature="e#0#78#0" expanded="true" />
-                <marker date="1478657291785" expanded="true" signature="401:412" ph="..." />
+                <marker date="1478873942108" expanded="true" signature="412:423" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Abstract.ComposantPatient.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComposantEditPatient.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="98" column="99" selection-start-line="98" selection-start-column="99" selection-end-line="98" selection-end-column="99" />
+              <folding>
+                <element signature="e#0#73#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +107,8 @@
       <file leaf-file-name="cabinetMedicalService.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="2125">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -103,47 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Modules/routing.module.ts">
+      <file leaf-file-name="edit.patient.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/Views/edit.patient.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secretary.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/secretary.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.patients.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Modules/routing.patients.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serverCabinetMedical.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
+            <state relative-caret-position="510">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -152,42 +129,29 @@
       <file leaf-file-name="ComposantOnlyPatient.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="153">
+              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1478656153146" expanded="true" signature="303:500" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="336:1113" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="364:1036" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="377:469" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="482:580" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="593:714" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="727:820" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="833:936" ph="..." />
+                <marker date="1478872573892" expanded="true" signature="949:1023" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComposantInfirmier.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
+      <file leaf-file-name="serverCabinetMedical.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding>
-                <marker date="1478655124021" expanded="true" signature="259:1263" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="300:468" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="582:1252" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="664:1237" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="685:820" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="867:1216" ph="..." />
-                <marker date="1478655124021" expanded="true" signature="1038:1216" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cabinetMedicalModule.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/cabinetMedicalModule.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1444">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,6 +161,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -211,26 +176,30 @@
         <option value="$PROJECT_DIR$/ts/Components/ComposantAjouterPatient.ts" />
         <option value="$PROJECT_DIR$/ts/DragDrop/DirectivesDragDrop.ts" />
         <option value="$PROJECT_DIR$/serverCabinetMedical.js" />
-        <option value="$PROJECT_DIR$/data/cabinetInfirmier.xml" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/typings.json" />
         <option value="$PROJECT_DIR$/typings/index.d.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/systemjs.config.js" />
-        <option value="$PROJECT_DIR$/css/secretary.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ts/Modules/routing.patients.module.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantApp.ts" />
-        <option value="$PROJECT_DIR$/secretary.html" />
         <option value="$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts" />
-        <option value="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
-        <option value="$PROJECT_DIR$/ts/secretary.ts" />
-        <option value="$PROJECT_DIR$/ts/Modules/routing.module.ts" />
-        <option value="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
-        <option value="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" />
-        <option value="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/ts/secretary.ts" />
+        <option value="$PROJECT_DIR$/data/cabinetInfirmier.xml" />
+        <option value="$PROJECT_DIR$/css/secretary.css" />
+        <option value="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" />
+        <option value="$PROJECT_DIR$/systemjs.config.js" />
+        <option value="$PROJECT_DIR$/secretary.html" />
+        <option value="$PROJECT_DIR$/ts/Modules/routing.module.ts" />
+        <option value="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts" />
+        <option value="$PROJECT_DIR$/ts/Views/edit.patient.html" />
+        <option value="$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts" />
       </list>
     </option>
   </component>
@@ -332,47 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="L3M-Projet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="L3M-Projet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="L3M-Projet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="L3M-Projet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Components" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,6 +332,7 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager" selected="Gulp.js.default">
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
@@ -501,12 +431,16 @@
       <workItem from="1478594966301" duration="6702000" />
       <workItem from="1478602279838" duration="6408000" />
       <workItem from="1478632777126" duration="6066000" />
-      <workItem from="1478647266217" duration="10503000" />
+      <workItem from="1478647266217" duration="10383000" />
+      <workItem from="1478690027737" duration="1601000" />
+      <workItem from="1478704609389" duration="2858000" />
+      <workItem from="1478782965190" duration="6156000" />
+      <workItem from="1478862285263" duration="7246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66308000" />
+    <option name="totallyTimeSpent" value="84049000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,23 +453,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2203125" sideWeight="0.7024169" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21979167" sideWeight="0.6621418" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.4960464" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30021143" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29915434" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.413242" sideWeight="0.50395364" order="8" side_tool="true" content_ui="tabs" x="16" y="596" width="1901" height="287" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2203125" sideWeight="0.29758307" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.412595" sideWeight="0.50395364" order="8" side_tool="true" content_ui="tabs" x="16" y="596" width="1901" height="287" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21979167" sideWeight="0.33785823" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -552,114 +486,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantPatient.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/cabinetMedicalModule.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" column="77" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-          <folding>
-            <marker date="1478655124021" expanded="true" signature="259:1263" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="300:468" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="582:1252" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="664:1237" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="685:820" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="867:1216" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="1038:1216" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/secretary.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="154" column="40" selection-start-line="154" selection-start-column="40" selection-end-line="154" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secretary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1478656690463" expanded="true" signature="485:1493" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="784:1217" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1356:1469" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1546:4317" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1651:4302" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1739:4274" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1760:1917" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1938:2090" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2111:2288" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2309:2677" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2391:2655" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2460:2629" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2698:2918" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2783:2896" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2939:3108" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3129:3320" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3341:3496" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3517:3702" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3723:3890" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3932:4251" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3987:4229" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantPatient.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/cabinetMedicalModule.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -675,13 +506,16 @@
         <state relative-caret-position="75">
           <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding>
-            <marker date="1478655124021" expanded="true" signature="259:1263" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="300:468" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="582:1252" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="664:1237" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="685:820" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="867:1216" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="1038:1216" ph="..." />
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1478872862952" expanded="true" signature="259:1964" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="300:468" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="582:1953" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="664:1938" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="685:857" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="904:1917" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1256:1895" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1321:1557" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1626:1869" ph="..." />
           </folding>
         </state>
       </provider>
@@ -690,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -709,28 +542,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1478656690463" expanded="true" signature="485:1493" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="784:1217" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1356:1469" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1546:4317" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1651:4302" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1739:4274" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1760:1917" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1938:2090" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2111:2288" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2309:2677" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2391:2655" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2460:2629" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2698:2918" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2783:2896" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2939:3108" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3129:3320" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3341:3496" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3517:3702" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3723:3890" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3932:4251" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3987:4229" ph="..." />
+            <element signature="e#0#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,9 +558,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="69" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -767,13 +577,16 @@
         <state relative-caret-position="255">
           <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding>
-            <marker date="1478655124021" expanded="true" signature="259:1263" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="300:468" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="582:1252" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="664:1237" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="685:820" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="867:1216" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="1038:1216" ph="..." />
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1478872862952" expanded="true" signature="259:1964" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="300:468" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="582:1953" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="664:1938" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="685:857" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="904:1917" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1256:1895" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1321:1557" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1626:1869" ph="..." />
           </folding>
         </state>
       </provider>
@@ -782,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2115">
           <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,28 +620,7 @@
         <state relative-caret-position="150">
           <caret line="11" column="78" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="78" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1478656690463" expanded="true" signature="485:1493" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="784:1217" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1356:1469" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1546:4317" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1651:4302" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1739:4274" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1760:1917" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1938:2090" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2111:2288" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2309:2677" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2391:2655" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2460:2629" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2698:2918" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2783:2896" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2939:3108" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3129:3320" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3341:3496" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3517:3702" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3723:3890" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3932:4251" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3987:4229" ph="..." />
+            <element signature="e#0#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,9 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,22 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-861">
           <caret line="195" column="29" selection-start-line="195" selection-start-column="29" selection-end-line="195" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/cabinetInfirmier.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -914,19 +686,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systemjs.config.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/secretary.css">
+    <entry file="file://$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts" />
+    <entry file="file://$PROJECT_DIR$/ts/Modules/routing.patients.module.ts" />
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="126" column="17" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="1095">
+          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#54#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantApp.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/secretary.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#57#0" expanded="false" />
+            <element signature="e#267#333#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -938,175 +738,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/data/cabinetInfirmier.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantPatient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/secretary.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="148" column="1" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ionicons/dist/scss/ionicons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systemjs.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/font-awesome/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1097">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/font-awesome/scss/font-awesome.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2-fontawesome/angular2-fontawesome.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/secretary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="83" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantApp.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <marker date="1478648080037" expanded="true" signature="73:175" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Modules/routing.secretary.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Modules/routing.patients.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/Modules/routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/secretary.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1478872862952" expanded="true" signature="259:1964" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="300:468" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="582:1953" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="664:1938" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="685:857" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="904:1917" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1256:1895" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1321:1557" ph="..." />
+            <marker date="1478872862952" expanded="true" signature="1626:1869" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/cabinetMedicalModule.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        <state relative-caret-position="676">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantPatient.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state relative-caret-position="17">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <marker date="1478655124021" expanded="true" signature="259:1263" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="300:468" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="582:1252" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="664:1237" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="685:820" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="867:1216" ph="..." />
-            <marker date="1478655124021" expanded="true" signature="1038:1216" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1478656153146" expanded="true" signature="303:500" ph="..." />
+            <marker date="1478873942108" expanded="true" signature="412:423" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        <state relative-caret-position="2125">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1478656690463" expanded="true" signature="485:1493" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="784:1217" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1356:1469" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1546:4317" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1651:4302" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1739:4274" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1760:1917" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="1938:2090" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2111:2288" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2309:2677" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2391:2655" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2460:2629" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2698:2918" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2783:2896" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="2939:3108" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3129:3320" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3341:3496" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3517:3702" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3723:3890" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3932:4251" ph="..." />
-            <marker date="1478656690463" expanded="true" signature="3987:4229" ph="..." />
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+        <state relative-caret-position="153">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
           <folding>
-            <element signature="e#0#78#0" expanded="true" />
-            <marker date="1478657291785" expanded="true" signature="401:412" ph="..." />
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1478872573892" expanded="true" signature="336:1113" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="364:1036" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="377:469" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="482:580" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="593:714" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="727:820" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="833:936" ph="..." />
+            <marker date="1478872573892" expanded="true" signature="949:1023" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Views/edit.patient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1444">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="98" column="99" selection-start-line="98" selection-start-column="99" selection-end-line="98" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
           </folding>
         </state>
       </provider>

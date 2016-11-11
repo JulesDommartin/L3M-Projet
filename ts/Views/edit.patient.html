@@ -1,0 +1,89 @@
+<section class="add-patient">
+    <h3>{{title}}</h3>
+    <form (ngSubmit)="submitPatient($event,editPatientForm)"
+          [formGroup]="editPatientForm"
+          novalidate>
+        <table>
+            <tr>
+                <td class="label-input">Prenom : </td>
+                <td><input name="patientForname"
+                           formControlName="patientForname"
+                           [formControl]="editPatientForm.controls['patientForname']"
+                           required></td>
+            </tr>
+            <tr>
+                <td class="label-input">Nom : </td>
+                <td><input name="patientName"
+                           formControlName="patientName"
+                           [formControl]="editPatientForm.controls['patientName']"
+                           required/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Numéro de sécurité sociale : </td>
+                <td><input name="patientNumber"
+                           formControlName="patientNumber"
+                           [formControl]="editPatientForm.controls['patientNumber']"
+                           required/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Sexe : </td>
+                <td>
+                    <select name="patientSex"
+                            formControlName="patientSex"
+                            [formControl]="editPatientForm.controls['patientSex']"
+                            required>
+                        <option value="M" selected>Homme</option>
+                        <option value="F">Femme</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-input">Adresse : </td>
+                <td>
+                    <composant-maps [composant]="this"></composant-maps>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-input">Rue : </td>
+                <td><input name="patientStreet"
+                           formControlName="patientStreet"
+                           [formControl]="editPatientForm.controls['patientStreet']"
+                           required #patientStreet/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Numéro de rue : </td>
+                <td><input name="patientStreetNumber"
+                           formControlName="patientStreetNumber"
+                           [formControl]="editPatientForm.controls['patientStreetNumber']"
+                           #patientStreetNumber/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Etage : </td>
+                <td><input name="patientFloor"
+                           formControlName="patientFloor"
+                           [formControl]="editPatientForm.controls['patientFloor']"/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Code postal : </td>
+                <td><input name="patientPostalCode"
+                           formControlName="patientPostalCode"
+                           [formControl]="editPatientForm.controls['patientPostalCode']"
+                           required #patientPostalCode/></td>
+            </tr>
+            <tr>
+                <td class="label-input">Ville : </td>
+                <td><input name="patientCity"
+                           formControlName="patientCity"
+                           [formControl]="editPatientForm.controls['patientCity']"
+                           required #patientCity/></td>
+            </tr>
+            <tr class="bottom-table">
+                <td></td>
+                <td>
+                    <input value="Ajouter Patient" class="ajouter-patient" type="submit"/>
+                    <input type="button" class="ajouter-patient" value="Annuler" (click)="annulerAjouterPatient()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>

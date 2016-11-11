@@ -149,5 +149,5 @@
                 </visite>
                 
         </patient>
-        <patient><nom>Dommartin</nom><prénom>Jules</prénom><numéro>19508246591213</numéro><sexe/><naissance/><visite date="2014-12-08" intervenant="003"/><adresse><étage>4</étage><numéro>4</numéro><rue>Etienne Forest</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient><patient><nom>Dommartin</nom><prénom>Jules</prénom><numéro>1354934646232</numéro><sexe/><naissance/><visite date="2014-12-08" intervenant="001"/><adresse><étage>4</étage><numéro>4</numéro><rue>Etienne Forest</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient></patients>
-    </cabinet>
+    <patient><nom>Dujardin</nom><prénom>Jean</prénom><numéro>46593154354531</numéro><sexe>M</sexe><naissance/><visite date="2014-12-08" intervenant="002"/><adresse><étage/><numéro>73</numéro><rue>Rue d'Alembert</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient></patients>
+</cabinet>

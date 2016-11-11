@@ -10,14 +10,20 @@ import { ComposantPatient }         from "./Components/ComposantPatient";
 import { ComposantOnlyPatient }     from "./Components/ComposantOnlyPatient";
 import { ComposantInfirmier }       from "./Components/ComposantInfirmier";
 import { ComposantMaps }            from "./Components/ComposantMaps";
+import { ComposantAddPatient }      from "./Components/ComposantAddPatient";
+import { ComposantEditPatient }     from "./Components/ComposantEditPatient";
 
 import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
 import { AppRoutingModule }         from "./Modules/routing.module";
-//import { SecretaryRoutingModule }   from "./Modules/routing.secretary.module";
-//import { PatientsRoutingModule }    from "./Modules/routing.patients.module";
 
 import { AgmCoreModule }            from "angular2-google-maps/core";
+import { ReactiveFormsModule }      from "@angular/forms";
+import {
+    LocationStrategy,
+    HashLocationStrategy
+} from "@angular/common";
+import {Angular2FontawesomeModule} from "angular2-fontawesome/angular2-fontawesome";
 
 @NgModule({
     imports     : [
@@ -26,11 +32,11 @@ import { AgmCoreModule }            from "angular2-google-maps/core";
         DragDropModule,
         HttpModule,
         AppRoutingModule,
-        //PatientsRoutingModule,
-        //SecretaryRoutingModule,
+        ReactiveFormsModule,
         AgmCoreModule.forRoot({
             apiKey: "AIzaSyCsJZjpW-blWWGv7DlYQSe3O9NEftzpan4"
-        })
+        }),
+        Angular2FontawesomeModule
     ],
     exports     : [ AppRoutingModule ],
     declarations: [
@@ -39,9 +45,11 @@ import { AgmCoreModule }            from "angular2-google-maps/core";
         ComposantPatient,
         ComposantOnlyPatient,
         ComposantInfirmier,
-        ComposantMaps
+        ComposantMaps,
+        ComposantAddPatient,
+        ComposantEditPatient
     ],
-    providers   : [ ServiceCabinetMedical ],
+    providers   : [ ServiceCabinetMedical, {provide: LocationStrategy, useClass: HashLocationStrategy} ]
 
 })
 export class CabinetMedicalModule { }

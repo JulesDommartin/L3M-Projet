@@ -17,6 +17,7 @@ const htmlTemplate = `
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Numéro de sécu</th>
+                    <th>Options</th>
                 </tr>
                 <tr class="patient-infirmier" 
                         (click)="onClick(patient)" 
@@ -25,6 +26,18 @@ const htmlTemplate = `
                     <td>{{patient.nom}}</td>
                     <td>{{patient.prenom}}</td>
                     <td>{{patient.numeroSecuriteSociale}}</td>
+                    <td>
+                        <span title="Voir les infos du patient" 
+                                alt="Voir les infos du patient" 
+                                (click)="viewPatient(patient.numeroSecuriteSociale)">
+                            <fa [name]="'eye'"></fa>
+                        </span>
+                        <span title="Modifier les infos du patient" 
+                                alt="Modifier les infos du patient" 
+                                (click)="editPatient(patient.numeroSecuriteSociale)">
+                            <fa [name]="'pencil'"></fa>
+                        </span>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -32,7 +45,8 @@ const htmlTemplate = `
 `;
 @Component({
     selector	: "composant-infirmier",
-    template	: htmlTemplate
+    template	: htmlTemplate,
+    styleUrls   : ["node_modules/font-awesome/css/font-awesome.css"]
 })
 export class ComposantInfirmier {
     @Input() infirmier  : NF.InfirmierInterface;
@@ -41,6 +55,14 @@ export class ComposantInfirmier {
 
     onClick(patient: PatientInterface) {
         this.router.navigate(["/patient", patient.numeroSecuriteSociale]);
+    }
+
+    viewPatient(numero : string) {
+        this.router.navigate(["/patient", numero]);
+    }
+
+    editPatient(numero : string) {
+        this.router.navigate(["/editPatient",numero]);
     }
 
 }

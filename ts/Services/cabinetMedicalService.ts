@@ -94,11 +94,11 @@ export class ServiceCabinetMedical {
 
     parsePatient(el : Element) {
         let id          = el.getAttribute("id");
-        let nom         = el.querySelector("nom").textContent               || "";
-        let prenom      = el.querySelector("prénom").textContent            || "";
-        let sexe        = this.getSexe(el.querySelector("sexe").textContent)|| "";
-        let naissance   = el.querySelector("naissance").textContent         || "";
-        let numéro      = el.querySelector("numéro").textContent            || "";
+        let nom         = el.querySelector("nom")               .textContent || "";
+        let prenom      = el.querySelector("prénom")            .textContent || "";
+        let sexe        = this.getSexe(el.querySelector("sexe") .textContent)|| "";
+        let naissance   = el.querySelector("naissance")         .textContent || "";
+        let numéro      = el.querySelector("numéro")            .textContent || "";
         let adresse     = this.parseAdresse(el.querySelector("adresse"))    || {};
         let patient : PatientInterface = <PatientInterface>{
             id                      : id,
@@ -123,11 +123,11 @@ export class ServiceCabinetMedical {
     }
 
     parseAdresse(el : Element) : any {
-        let ville       = el.querySelector("ville")         || "";
-        let codePostal  = el.querySelector("codePostal")    || "";
-        let rue         = el.querySelector("rue")           || "";
-        let numero      = el.querySelector("numero")        || "";
-        let etage       = el.querySelector("etage")         || "";
+        let ville       = (el.querySelector("ville"))       ? el.querySelector("ville")     .textContent : "";
+        let codePostal  = (el.querySelector("codePostal"))  ? el.querySelector("codePostal").textContent : "";
+        let rue         = (el.querySelector("rue"))         ? el.querySelector("rue")       .textContent : "";
+        let numero      = (el.querySelector("numéro"))      ? el.querySelector("numéro")    .textContent : "";
+        let etage       = (el.querySelector("étage"))       ? el.querySelector("étage")     .textContent : null;
 
         let adresse = {
             ville       : ville,
@@ -149,12 +149,8 @@ export class ServiceCabinetMedical {
     }
 
     AjouterPatient (f: NgForm) : Promise<any> {
-        let controls = f.form.controls;
-        let body     = {};
-        for(let v in controls) {
-            body[v] = controls[v].value;
-        }
-        return this._http.post( "./addPatient", body ).toPromise().then( () => body );
+        let controls = f.value;
+        return this._http.post( "./addPatient", controls ).toPromise().then( () => controls );
     }
 
     getPatientById(numero: string): Promise<PatientInterface> {
