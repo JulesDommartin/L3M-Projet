@@ -17,6 +17,7 @@
     "@angular/platform-browser-dynamic": "2.1.2",
     "@angular/router": "3.1.2",
     "@angular/upgrade": "2.1.2",
+    "@google/maps": "^0.3.0",
     "angular-in-memory-web-api": "~0.1.13",
     "angular2-fontawesome": "^0.7.0",
     "angular2-google-maps": "^0.16.0",

@@ -1,5 +1,4 @@
-import {Component, OnInit, Input, ElementRef, ViewChild}        from "@angular/core";
-import {ComposantSecretaire}                                    from "./ComposantSecretaire";
+import {Component, OnInit, ElementRef, ViewChild}        from "@angular/core";
 import * as NF                                                  from "@Services/cabinetMedicalService";
 import {NgForm, FormBuilder, FormGroup, Validators}             from "@angular/forms";
 import {sexeEnum}                                               from "@Services/cabinetMedicalService";
@@ -14,7 +13,6 @@ export abstract class AbstractComposantPatient implements OnInit {
     @ViewChild("patientStreetNumber")   patientStreetNumber : ElementRef;
     @ViewChild("patientPostalCode")     patientPostalCode   : ElementRef;
     @ViewChild("patientCity")           patientCity         : ElementRef;
-    @Input() composantSecretaire                            : ComposantSecretaire;
     editPatientForm                                         : FormGroup;
     title                                                   : string;
     this = this;

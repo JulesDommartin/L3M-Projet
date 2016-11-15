@@ -31,6 +31,7 @@ export interface CabinetInterface {
 
 @Injectable()
 export class ServiceCabinetMedical {
+    public cabinet;
     constructor(private _http: Http) {} // Le service CabinetMedical a besoin du service Http
     getData( url: string ) : Promise<CabinetInterface> {
         return this._http.get(url).toPromise().then( (res: Response) => {
@@ -59,6 +60,7 @@ export class ServiceCabinetMedical {
                     }
                 }
             });
+            this.cabinet = cabinet;
             return cabinet;
         }); // Fin de this._http.get
     }

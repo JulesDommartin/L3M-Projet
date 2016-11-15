@@ -25,7 +25,8 @@
             'moment': 'node_modules/moment/moment.js',
             'ng2-bootstrap/ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
             'angular2-google-maps/core': 'npm:angular2-google-maps/core',
-            'angular2-fontawesome': 'node_modules/angular2-fontawesome'
+            'angular2-fontawesome': 'node_modules/angular2-fontawesome',
+            '@google/maps':'npm:@google/maps/lib/'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {

@@ -18,7 +18,7 @@ const htmlTemplate = `
                                 alx-dragstart-css="drag-start-infirmier"
                                 alx-draghover-css="drag-hover-infirmier"
                                 (alx-ondrop)="affecterPatient($event, infirmier)">
-            <composant-infirmier [infirmier]="infirmier"></composant-infirmier>
+            <composant-infirmier [infirmier]="infirmier" [cabinet]="cabinet"></composant-infirmier>
         </div>
         
         
