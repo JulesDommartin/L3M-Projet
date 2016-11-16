@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from "@angular/core";
 import { MapsAPILoader } from "angular2-google-maps/core";
-import {InfirmierInterface} from "@Services/cabinetMedicalService";
+import {InfirmierInterface, ServiceCabinetMedical} from "@Services/cabinetMedicalService";
 
 const htmlTemplate = `
     <div class="map-infirmier map-infirmier-{{infirmier.id}}">
@@ -18,7 +18,8 @@ export class ComposantMapsInfirmier implements OnInit {
     directionService                        : google.maps.DirectionsService;
     directionDisplay                        : google.maps.DirectionsRenderer;
     positions                               : any [] = [];
-    constructor(private __loader: MapsAPILoader) {}
+    colors                                  : string [] = [];
+    constructor(private __loader: MapsAPILoader, private cms : ServiceCabinetMedical) {}
 
     ngOnInit() {
         this.__loader.load().then( () => {
@@ -29,12 +30,29 @@ export class ComposantMapsInfirmier implements OnInit {
                 zoom: 12
             });
             this.getTrip();
+            this.colors = ["red", "green", "blue", "yellow", "purple", "grey"];
         });
     }
 
     public getTrip() {
         this.directionDisplay = new google.maps.DirectionsRenderer();
         let promises : Promise<google.maps.GeocoderResult[]>[] = [];
+        let adresseCabinet = this.cms.cabinetAdresse.numero + " "
+            + this.cms.cabinetAdresse.rue + " "
+            + this.cms.cabinetAdresse.ville + " "
+            + this.cms.cabinetAdresse.codePostal;
+        let promise = new Promise((resolve, reject) => {
+            this.geocoder.geocode({"address": adresseCabinet},
+                (results : google.maps.GeocoderResult[], status : google.maps.GeocoderStatus) => {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        resolve(results);
+                    } else {
+                        reject(status);
+                    }
+                }
+            );
+        });
+        promises.push(promise);
         for (let patient of this.infirmier.patients) {
             let adresse : string =  patient.adresse.ville + " "
                 + patient.adresse.rue + " "
@@ -54,17 +72,8 @@ export class ComposantMapsInfirmier implements OnInit {
             promises.push(promise);
         }
         Promise.all(promises).then( (res : Array<google.maps.GeocoderResult[]>) => {
-            /*let directionRequest : google.maps.DirectionsRequest;
-            directionRequest.origin             = this.positions[0].location;
-            directionRequest.destination        = this.positions[this.positions.length - 1].location;
-            directionRequest.travelMode         = google.maps.TravelMode.DRIVING;
-            directionRequest.waypoints          = this.positions;
-            directionRequest.optimizeWaypoints  = true;*/
-            if (res.length === 0) {
+            if (res.length === 1) {
                 console.log("Aucun patient");
-            } else if (res.length === 1) {
-                console.log("Un seul patient");
-                this.setMarkerForOnePatient(res[0][0]);
             } else {
                 for (let obj of res) {
                     this.positions.push({"location" : obj[0].geometry.location});
@@ -90,7 +99,7 @@ export class ComposantMapsInfirmier implements OnInit {
     displayMapDirection() {
         let directionRequest = {
             origin              : this.positions[0].location,
-            destination         : this.positions[this.positions.length - 1].location,
+            destination         : this.positions[0].location,
             travelMode          : google.maps.TravelMode.DRIVING,
             waypoints           : this.positions,
             optimizeWaypoints   : true
@@ -99,6 +108,12 @@ export class ComposantMapsInfirmier implements OnInit {
             console.log(results);
             if (status === google.maps.DirectionsStatus.OK) {
                 this.directionDisplay.setMap(this.map);
+                let random = Math.floor(Math.random() * this.colors.length);
+                this.directionDisplay.setOptions({
+                    polylineOptions: {
+                        strokeColor: this.colors[random]
+                    }
+                });
                 this.directionDisplay.setDirections(results);
             } else {
                 console.log("Status : " + status);

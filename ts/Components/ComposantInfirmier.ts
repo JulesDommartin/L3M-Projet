@@ -41,7 +41,7 @@ const htmlTemplate = `
                 </tr>
             </table>
         </div>
-        <composant-maps-infirmier [infirmier]="infirmier"></composant-maps-infirmier>
+        <composant-maps-infirmier *ngIf="infirmier.patients.length > 0" [infirmier]="infirmier"></composant-maps-infirmier>
     </div>
 `;
 @Component({
