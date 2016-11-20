@@ -41,6 +41,7 @@ const htmlTemplate = `
                 </tr>
             </table>
         </div>
+        <composant-maps-infirmier *ngIf="infirmier.patients.length > 0" [infirmier]="infirmier"></composant-maps-infirmier>
     </div>
 `;
 @Component({
@@ -50,8 +51,10 @@ const htmlTemplate = `
 })
 export class ComposantInfirmier {
     @Input() infirmier  : NF.InfirmierInterface;
+    @Input() cabinet    : NF.CabinetInterface;
 
-    constructor(private router : Router) {}
+    constructor(private router : Router) {
+    }
 
     onClick(patient: PatientInterface) {
         this.router.navigate(["/patient", patient.numeroSecuriteSociale]);

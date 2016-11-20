@@ -9,7 +9,7 @@ import {AbstractComposantPatient} from "./Abstract.ComposantPatient";
 
 
 @Component({
-    templateUrl	: "ts/views/edit.patient.html"
+    templateUrl	: "ts/Views/edit.patient.html"
 })
 export class ComposantAddPatient extends AbstractComposantPatient implements OnInit {
     @Input() composantSecretaire                            : ComposantSecretaire;

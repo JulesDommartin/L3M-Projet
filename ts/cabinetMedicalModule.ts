@@ -12,6 +12,7 @@ import { ComposantInfirmier }       from "./Components/ComposantInfirmier";
 import { ComposantMaps }            from "./Components/ComposantMaps";
 import { ComposantAddPatient }      from "./Components/ComposantAddPatient";
 import { ComposantEditPatient }     from "./Components/ComposantEditPatient";
+import { ComposantMapsInfirmier }   from "./Components/ComposantMapsInfirmier";
 
 import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
@@ -47,7 +48,8 @@ import {Angular2FontawesomeModule} from "angular2-fontawesome/angular2-fontaweso
         ComposantInfirmier,
         ComposantMaps,
         ComposantAddPatient,
-        ComposantEditPatient
+        ComposantEditPatient,
+        ComposantMapsInfirmier
     ],
     providers   : [ ServiceCabinetMedical, {provide: LocationStrategy, useClass: HashLocationStrategy} ]
 

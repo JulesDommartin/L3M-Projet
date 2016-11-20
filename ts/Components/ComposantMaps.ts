@@ -1,6 +1,8 @@
 import {Component, OnInit, Input, ViewChild, ElementRef} from "@angular/core";
 import { MapsAPILoader } from "angular2-google-maps/core";
 import {AbstractComposantPatient} from "./Abstract.ComposantPatient";
+import {ComposantEditPatient} from "./ComposantEditPatient";
+import {PatientInterface} from "@Services/cabinetMedicalService";
 
 const htmlTemplate = `
     <input name="adresse" placeholder="Ex: 4 rue du Bout Guesdon 14100 IFS" #searchAdress>
@@ -59,6 +61,7 @@ export class ComposantMaps implements OnInit {
                     console.log("Error - ", results, " & Status - ", status);
                 }
             });
+            this.initPatientLocation();
         });
     }
 
@@ -84,29 +87,46 @@ export class ComposantMaps implements OnInit {
         }
     }
 
+    public initPatientLocation() {
+        if (this.composant instanceof ComposantEditPatient) {
+            this.composant.setAdresse((<ComposantEditPatient>this.composant).patient.adresse);
+            let patient : PatientInterface = (<ComposantEditPatient>this.composant).patient;
+            console.log(patient);
+            let adresse : string =  patient.adresse.ville + " "
+                + patient.adresse.rue + " "
+                + patient.adresse.codePostal + " "
+                + patient.adresse.numero;
+            console.log("Init patient address : " + adresse);
+            this.geocode(adresse);
+        }
+    }
 
     public search() {
         if (this.searchAdress.nativeElement.value) {
             let address : string = this.searchAdress.nativeElement.value;
-            this.geocoder.geocode( { "address": address}, (results, status) => {
-                if (status === google.maps.GeocoderStatus.OK) {
-                    console.log(results);
-                    if (this.marker) {
-                        this.marker.setMap(null);
-                    }
-                    this.marker = new google.maps.Marker({
-                        position    : results[0].geometry.location,
-                        map         : this.map
-                    });
-                    this.map.setCenter(results[0].geometry.location);
-                    this.infoWindow.setContent(results[0].formatted_address);
-                    this.infoWindow.open(this.map, this.marker);
-                    this.setPatientInfos(results[0]);
-                } else {
-                    console.log("Error - ", results, " & Status - ", status);
-                }
-            });
+            this.geocode(address);
         }
+    }
+
+    public geocode(address : string) {
+        this.geocoder.geocode( { "address": address}, (results, status) => {
+            if (status === google.maps.GeocoderStatus.OK) {
+                console.log(results);
+                if (this.marker) {
+                    this.marker.setMap(null);
+                }
+                this.marker = new google.maps.Marker({
+                    position    : results[0].geometry.location,
+                    map         : this.map
+                });
+                this.map.setCenter(results[0].geometry.location);
+                this.infoWindow.setContent(results[0].formatted_address);
+                this.infoWindow.open(this.map, this.marker);
+                this.setPatientInfos(results[0]);
+            } else {
+                console.log("Error - ", results, " & Status - ", status);
+            }
+        });
     }
 
 }

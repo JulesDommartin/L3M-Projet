@@ -31,6 +31,8 @@ export interface CabinetInterface {
 
 @Injectable()
 export class ServiceCabinetMedical {
+    public cabinet;
+    public cabinetAdresse;
     constructor(private _http: Http) {} // Le service CabinetMedical a besoin du service Http
     getData( url: string ) : Promise<CabinetInterface> {
         return this._http.get(url).toPromise().then( (res: Response) => {
@@ -40,6 +42,13 @@ export class ServiceCabinetMedical {
             };
             let parser = new DOMParser();
             let doc = parser.parseFromString(res.text(), "text/xml");
+            let adresseElement = doc.querySelectorAll("cabinet adresse")[0];
+            this.cabinetAdresse = {
+                "numero"    : adresseElement.querySelector("numéro")    .textContent,
+                "rue"       : adresseElement.querySelector("rue")       .textContent,
+                "ville"     : adresseElement.querySelector("ville")     .textContent,
+                "codePostal": adresseElement.querySelector("codePostal").textContent
+            };
             Array.from(doc.querySelectorAll("infirmier")).forEach((el: HTMLElement) => {
                 let infirmier = this.parseInfirmier(el);
                 cabinet.infirmiers.push(infirmier);
@@ -59,6 +68,7 @@ export class ServiceCabinetMedical {
                     }
                 }
             });
+            this.cabinet = cabinet;
             return cabinet;
         }); // Fin de this._http.get
     }
@@ -78,9 +88,9 @@ export class ServiceCabinetMedical {
 
     parseInfirmier(el : Element) : InfirmierInterface {
         let id      = el.getAttribute("id");
-        let nom     = el.querySelector("nom").textContent       || "";
-        let prenom  = el.querySelector("prénom").textContent    || "";
-        let photo   = el.querySelector("photo").textContent     || "";
+        let nom     = el.querySelector("nom")   .textContent || "";
+        let prenom  = el.querySelector("prénom").textContent || "";
+        let photo   = el.querySelector("photo") .textContent || "";
 
         let infirmier : InfirmierInterface = <InfirmierInterface>{
             id      : id,

@@ -15,10 +15,7 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
     title       : string;
     patient     : PatientInterface;
     numero      : string;
-    geocoder    : google.maps.Geocoder;
-    map         : google.maps.Map;
-    marker      : google.maps.Marker;
-    infoWindow  : google.maps.InfoWindow;
+    cabinet     : NF.CabinetInterface;
     constructor(public cms          : NF.ServiceCabinetMedical,
                 router              : Router,
                 fb                  : FormBuilder,
@@ -30,13 +27,12 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
 
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
-            this.numero = params["numero"];
-            console.log(params);
+            this.numero     = params["numero"];
         });
         this.cms.getPatientById(this.numero).then((res) => {
             this.patient = res;
             console.log(res);
-            this.__loader.load().then(() => {
+            /*this.__loader.load().then(() => {
                 this.geocoder   = new google.maps.Geocoder();
                 this.infoWindow = new google.maps.InfoWindow();
                 this.map        = new google.maps.Map(document.querySelector(".map"), {
@@ -61,7 +57,7 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
                         console.log("Error - ", results, " & Status - ", status);
                     }
                 });
-            });
+            });*/
             this.loadPatientInfos();
         });
     }
@@ -77,7 +73,7 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
         event.preventDefault();
         console.log(f);
         if (f.valid) {
-            /*this.cms.AjouterPatient(f).then((dataPatient) => {
+            this.cms.AjouterPatient(f).then((dataPatient) => {
                 //Ajouter le patient dans le cabinet
                 let patient: PatientInterface = {
                     nom:                    dataPatient.patientName         || "",
@@ -92,11 +88,34 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
                         etage:              dataPatient.patientFloor        || ""
                     }
                 };
-                this.router.navigate(["/secretaire"]);
-                console.log(patient);
-            });*/
-            this.router.navigate(["/secretaire"]);
-            console.log("On modifiera le patient lorsque l'on aura ajouté la fonction au serveur");
+                let infId = null;
+                this.cms.cabinet.infirmiers.forEach((inf) => {
+                    if (inf.patients.filter((val) => {
+                        return val.numeroSecuriteSociale === patient.numeroSecuriteSociale;
+                        }).length === 1) {
+                        infId = inf.id;
+                    }
+                });
+                if (infId) {
+                    this.cms.affecterPatient(
+                        this.patient.numeroSecuriteSociale,
+                        infId
+                    )
+                    .then( () => {
+                        console.log(this.cms.cabinet.infirmiers.filter( (inf) => {
+                            return inf.id === infId;
+                        }));
+                        this.cms.cabinet.infirmiers.filter( (inf) => {
+                            return inf.id === infId;
+                        })[0].patients.push(patient);
+                        this.router.navigate(["/secretaire"]);
+                        console.log("Patient modifié");
+                    })
+                    .catch( (err) => {
+                        console.log("Erreur : " + err);
+                    });
+                }
+            });
         } else {
             console.log("Error");
         }
