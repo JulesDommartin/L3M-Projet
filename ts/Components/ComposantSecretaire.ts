@@ -62,6 +62,7 @@ export class ComposantSecretaire implements OnInit {
         this.cms.affecterPatient(patient.numeroSecuriteSociale, infirmier.id);
         this.desaffecterPatient(patient, this.cabinet.infirmiers);
         infirmier.patients.push(patient);
+
     }
 
     public desaffecterPatient(patient, infirmiers: InfirmierInterface[]) {

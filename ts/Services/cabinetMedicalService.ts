@@ -88,9 +88,9 @@ export class ServiceCabinetMedical {
 
     parseInfirmier(el : Element) : InfirmierInterface {
         let id      = el.getAttribute("id");
-        let nom     = el.querySelector("nom").textContent       || "";
-        let prenom  = el.querySelector("prénom").textContent    || "";
-        let photo   = el.querySelector("photo").textContent     || "";
+        let nom     = el.querySelector("nom")   .textContent || "";
+        let prenom  = el.querySelector("prénom").textContent || "";
+        let photo   = el.querySelector("photo") .textContent || "";
 
         let infirmier : InfirmierInterface = <InfirmierInterface>{
             id      : id,
