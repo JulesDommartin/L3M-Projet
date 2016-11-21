@@ -18,6 +18,9 @@ import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
 import { AppRoutingModule }         from "./Modules/routing.module";
 
+import { SimpleNotificationsModule }from "angular2-notifications";
+
+
 import { AgmCoreModule }            from "angular2-google-maps/core";
 import { ReactiveFormsModule }      from "@angular/forms";
 import {
@@ -37,7 +40,8 @@ import {Angular2FontawesomeModule} from "angular2-fontawesome/angular2-fontaweso
         AgmCoreModule.forRoot({
             apiKey: "AIzaSyCsJZjpW-blWWGv7DlYQSe3O9NEftzpan4"
         }),
-        Angular2FontawesomeModule
+        Angular2FontawesomeModule,
+        SimpleNotificationsModule
     ],
     exports     : [ AppRoutingModule ],
     declarations: [

@@ -3,7 +3,13 @@ import { MapsAPILoader } from "angular2-google-maps/core";
 import {InfirmierInterface, ServiceCabinetMedical} from "@Services/cabinetMedicalService";
 
 const htmlTemplate = `
-    <div class="map-infirmier map-infirmier-{{infirmier.id}}">
+    <div class="composant-map-infirmier">
+        <div class="map-infirmier map-infirmier-{{infirmier.id}}">
+        </div>
+        <div class="map-info">
+            <p><b>Temps : {{time}}</b></p>
+            <p><b>Distance : {{distance}} km</b></p>
+        </div>
     </div>
 `;
 @Component({
@@ -17,16 +23,16 @@ export class ComposantMapsInfirmier implements OnInit {
     marker                                  : google.maps.Marker;
     directionService                        : google.maps.DirectionsService;
     directionDisplay                        : google.maps.DirectionsRenderer;
-    reloader                                : google.maps.ControlPosition;
     positions                               : any [] = [];
     colors                                  : string [] = [];
+    time                                    : string = "";
+    distance                                : string = "";
     constructor(private __loader: MapsAPILoader, private cms : ServiceCabinetMedical) {}
 
     ngOnInit() {
         this.__loader.load().then( () => {
             this.directionService   = new google.maps.DirectionsService();
             this.geocoder           = new google.maps.Geocoder();
-            console.log(".map-infirmier-" + this.infirmier.id);
             this.map                = new google.maps.Map(document.querySelector(".map-infirmier-" + this.infirmier.id), {
                 zoom: 12
             });
@@ -108,7 +114,6 @@ export class ComposantMapsInfirmier implements OnInit {
             optimizeWaypoints   : true
         };
         this.directionService.route(directionRequest, (results, status) => {
-            console.log(results);
             if (status === google.maps.DirectionsStatus.OK) {
                 this.directionDisplay.setMap(this.map);
                 let random = Math.floor(Math.random() * this.colors.length);
@@ -118,6 +123,14 @@ export class ComposantMapsInfirmier implements OnInit {
                     }
                 });
                 this.directionDisplay.setDirections(results);
+                let totalTravelTime : number = 0;
+                let totalDistance   : number = 0;
+                results.routes[0].legs.forEach((val) => {
+                   totalTravelTime  += val.duration.value;
+                   totalDistance    += val.distance.value;
+                });
+                this.time       = this.toHHMMSS(totalTravelTime);
+                this.distance   = this.toKM(totalDistance);
             } else {
                 console.log("Status : " + status);
             }
@@ -160,6 +173,27 @@ export class ComposantMapsInfirmier implements OnInit {
 
         this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(controlUI);
 
+    }
+
+    public toHHMMSS (seconds : number) : string {
+        let hours   = Math.floor(seconds / 3600);
+        let minutes = Math.floor((seconds - (hours * 3600)) / 60);
+
+        let hours_string = "";
+        let minutes_string = "";
+
+        if (hours   < 10) {hours_string   = "0"+hours.toString();}    else {hours_string   = hours.toString();}
+        if (minutes < 10) {minutes_string = "0"+minutes.toString();}  else {minutes_string = minutes.toString();}
+
+        if (hours === 0) {
+            return minutes_string + "m";
+        } else {
+            return hours_string + "h " + minutes_string + "m";
+        }
+    }
+
+    public toKM (distance : number) {
+        return (distance/1000).toFixed(1);
     }
 
 }

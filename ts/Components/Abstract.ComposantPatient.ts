@@ -15,6 +15,10 @@ export abstract class AbstractComposantPatient implements OnInit {
     @ViewChild("patientCity")           patientCity         : ElementRef;
     editPatientForm                                         : FormGroup;
     title                                                   : string;
+    public options                                          : any = {
+        position: ["bottom", "right"],
+        timeOut: 5000,
+    };
     this = this;
     initDone                                                : boolean = false;
     constructor(public cms: NF.ServiceCabinetMedical, protected router : Router, protected fb: FormBuilder) {
@@ -48,6 +52,12 @@ export abstract class AbstractComposantPatient implements OnInit {
 
     public annulerAjouterPatient() {
         this.router.navigate(["/secretaire"]);
+    }
+
+    protected onDestroy(event: Event) {
+        if (event.type === "success") {
+            this.router.navigate(["/secretaire"]);
+        }
     }
 }
 

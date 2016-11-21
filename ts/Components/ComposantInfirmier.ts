@@ -10,23 +10,25 @@ const htmlTemplate = `
             <h4>{{infirmier.nom}}</h4>
             <span>{{infirmier.prenom}}</span>
         </div>
-        <img class="photo-infirmier" src="../data/{{infirmier.photo}}"/>
+        <div class="photo-infirmier">
+            <img src="../data/{{infirmier.photo}}"/>
+        </div>
         <div class="patients-infirmier">
             <table *ngIf="infirmier.patients.length > 0" class="table-infirmier">
                 <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Numéro de sécu</th>
-                    <th>Options</th>
+                    <th class="nom">Nom</th>
+                    <th class="prenom">Prénom</th>
+                    <th class="num-secu">Numéro de sécurité sociale</th>
+                    <th class="options">Options</th>
                 </tr>
                 <tr class="patient-infirmier" 
                         (click)="onClick(patient)" 
                         *ngFor="let patient of infirmier.patients" 
                         [alx-draggable]="patient">
-                    <td>{{patient.nom}}</td>
-                    <td>{{patient.prenom}}</td>
-                    <td>{{patient.numeroSecuriteSociale}}</td>
-                    <td>
+                    <td class="nom">{{patient.nom}}</td>
+                    <td class="prenom">{{patient.prenom}}</td>
+                    <td class="num-secu">{{patient.numeroSecuriteSociale}}</td>
+                    <td class="options">
                         <span title="Voir les infos du patient" 
                                 alt="Voir les infos du patient" 
                                 (click)="viewPatient(patient.numeroSecuriteSociale)">

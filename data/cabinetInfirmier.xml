@@ -77,7 +77,7 @@
                 (Pansement de brûlure étendue ou de plaie chimique ou thermique étendue,
                     sur une surface supérieure à 5 % de la surface corporelle.....)
                 -->
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="002">
                     <acte id="300"/>               
                 </visite>
                 
@@ -149,5 +149,5 @@
                 </visite>
                 
         </patient>
-    <patient><nom>Dujardin</nom><prénom>Jean</prénom><numéro>46593154354531</numéro><sexe>M</sexe><naissance/><visite date="2014-12-08" intervenant="003"/><adresse><étage/><numéro>73</numéro><rue>Rue d'Alembert</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient></patients>
+    </patients>
 </cabinet>

@@ -120,7 +120,6 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
             console.log("Error");
         }
     }
-
 }
 
 

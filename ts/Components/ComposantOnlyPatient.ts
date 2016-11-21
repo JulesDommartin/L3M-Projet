@@ -21,7 +21,7 @@ const htmlTemplate = `
         </tr>
         <tr>
             <td><b>Sexe :</b></td>
-            <td>{{patient.sexe || ""}}</td>
+            <td>{{getLitteralPatientSexe()}}</td>
         </tr>
         <tr>
             <td><b>Naissance :</b></td>
@@ -37,7 +37,9 @@ const htmlTemplate = `
         <br/>
         <br/>
     </div>
-    <a [routerLink]="['/secretaire']">Retour</a>
+    <div class="div-bouton-retour">
+        <a class="bouton-retour" [routerLink]="['/secretaire']">Retour</a>
+    </div>
 `;
 @Component({
     template	: htmlTemplate
@@ -84,5 +86,17 @@ export class ComposantOnlyPatient implements OnInit {
                 });
             });
         });
+    }
+
+    getLitteralPatientSexe() {
+        if (this.patient) {
+            if (this.patient.sexe === 0) {
+                return "Homme";
+            } else if (this.patient.sexe === 1) {
+                return "Femme";
+            } else {
+                return "?";
+            }
+        }
     }
 }

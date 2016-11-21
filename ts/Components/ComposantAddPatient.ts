@@ -2,7 +2,6 @@ import {Component, OnInit, Input}        from "@angular/core";
 import {ComposantSecretaire}                                    from "./ComposantSecretaire";
 import * as NF                                                  from "@Services/cabinetMedicalService";
 import {NgForm, FormBuilder, FormGroup, Validators}             from "@angular/forms";
-import {PatientInterface}                                       from "@Services/cabinetMedicalService";
 import {sexeEnum}                                               from "@Services/cabinetMedicalService";
 import {Router}                                                 from "@angular/router";
 import {AbstractComposantPatient} from "./Abstract.ComposantPatient";
@@ -38,27 +37,12 @@ export class ComposantAddPatient extends AbstractComposantPatient implements OnI
 
     public submitPatient(event: Event, f: NgForm) {
         event.preventDefault();
-        console.log(f);
         if (f.valid) {
             this.cms.AjouterPatient(f).then( (dataPatient) => {
-                //Ajouter le patient dans le cabinet
-                let patient : PatientInterface = {
-                    nom                     : dataPatient.patientName          || "",
-                    prenom                  : dataPatient.patientForname       || "",
-                    numeroSecuriteSociale   : dataPatient.patientNumber        || "",
-                    sexe                    : dataPatient.patientSex           || sexeEnum.M,
-                    adresse                 : {
-                        ville               : dataPatient.patientCity          || "",
-                        codePostal          : dataPatient.patientPostalCode    || null,
-                        rue                 : dataPatient.patientStreet        || "",
-                        numero              : dataPatient.patientStreetNumber  || null,
-                        etage               : dataPatient.patientFloor         || ""
-                    }
-                };
-                this.router.navigate(["/secretaire"]);
-                console.log(patient);
+                console.log("Patient ajouté : ", dataPatient);
             });
         } else {
+            this.cms._service.error("Erreur", "Certains champs ne sont pas remplis comme il faut");
             console.log("Error");
         }
     }

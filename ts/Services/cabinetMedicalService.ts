@@ -2,6 +2,7 @@ import {Injectable}     from "@angular/core";
 import {Http, Response} from "@angular/http";
 import "rxjs/add/operator/toPromise";
 import {NgForm} from "@angular/forms";
+import {NotificationsService} from "angular2-notifications";
 
 export enum sexeEnum {M, F}
 export interface PatientInterface {
@@ -33,7 +34,7 @@ export interface CabinetInterface {
 export class ServiceCabinetMedical {
     public cabinet;
     public cabinetAdresse;
-    constructor(private _http: Http) {} // Le service CabinetMedical a besoin du service Http
+    constructor(private _http: Http, public _service : NotificationsService) {} // Le service CabinetMedical a besoin du service Http
     getData( url: string ) : Promise<CabinetInterface> {
         return this._http.get(url).toPromise().then( (res: Response) => {
             let cabinet : CabinetInterface = {
@@ -77,12 +78,15 @@ export class ServiceCabinetMedical {
         return this._http.post("/affectation", {infirmier: idInf, patient: idPatient}).toPromise().then((res) => {
             if (res.status === 200) {
                 console.log("Le patient a été affecté");
+                this._service.success("Succès", "Le patient a été affecté");
             } else {
                 console.log("Une erreur s'est produite : " + res.status + " : " + res.statusText);
+                this._service.error("Erreur", res.status + " : " + res.statusText);
             }
         })
         .catch((err) => {
             console.log(err);
+            this._service.error("Erreur", err);
         });
     }
 
@@ -104,12 +108,12 @@ export class ServiceCabinetMedical {
 
     parsePatient(el : Element) {
         let id          = el.getAttribute("id");
-        let nom         = el.querySelector("nom")               .textContent || "";
-        let prenom      = el.querySelector("prénom")            .textContent || "";
-        let sexe        = this.getSexe(el.querySelector("sexe") .textContent)|| "";
-        let naissance   = el.querySelector("naissance")         .textContent || "";
-        let numéro      = el.querySelector("numéro")            .textContent || "";
-        let adresse     = this.parseAdresse(el.querySelector("adresse"))    || {};
+        let nom         = el.querySelector("nom")               .textContent    || "";
+        let prenom      = el.querySelector("prénom")            .textContent    || "";
+        let sexe        = this.getSexe(el.querySelector("sexe") .textContent);
+        let naissance   = el.querySelector("naissance")         .textContent    || "";
+        let numéro      = el.querySelector("numéro")            .textContent    || "";
+        let adresse     = this.parseAdresse(el.querySelector("adresse"))        || {};
         let patient : PatientInterface = <PatientInterface>{
             id                      : id,
             nom                     : nom,
@@ -153,14 +157,21 @@ export class ServiceCabinetMedical {
     getSexe(sexe : string) : sexeEnum {
         if (sexe === "M") {
             return sexeEnum.M;
-        } else if (sexe === "F")
+        } else if (sexe === "F") {
             return sexeEnum.F;
-        return null;
+        } else
+            return null;
     }
 
     AjouterPatient (f: NgForm) : Promise<any> {
         let controls = f.value;
-        return this._http.post( "./addPatient", controls ).toPromise().then( () => controls );
+        return this._http.post( "./addPatient", controls ).toPromise()
+            .then( () => {
+                return controls;
+            } )
+            .catch( (err) => {
+                return err;
+            });
     }
 
     getPatientById(numero: string): Promise<PatientInterface> {
