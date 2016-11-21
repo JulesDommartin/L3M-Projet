@@ -55,11 +55,9 @@ export class ComposantOnlyPatient implements OnInit {
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
             this.numero = params["numero"];
-            console.log(params);
         });
         this.cms.getPatientById(this.numero).then((res) => {
             this.patient = res;
-            console.log(res);
             this.__loader.load().then(() => {
                 this.geocoder   = new google.maps.Geocoder();
                 this.infoWindow = new google.maps.InfoWindow();
@@ -70,7 +68,6 @@ export class ComposantOnlyPatient implements OnInit {
                     + this.patient.adresse.numero + " "
                     + this.patient.adresse.rue + " "
                     + this.patient.adresse.codePostal;
-                console.log(patientAdresse);
                 this.geocoder.geocode( { "address": patientAdresse}, (results, status) => {
                     if (status === google.maps.GeocoderStatus.OK) {
                         this.marker = new google.maps.Marker({

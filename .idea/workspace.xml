@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5ab7b1-5694-4390-b0be-0b284046ef4d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/Abstract.ComposantPatient.js" afterPath="$PROJECT_DIR$/app/Components/Abstract.ComposantPatient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantAddPatient.js" afterPath="$PROJECT_DIR$/app/Components/ComposantAddPatient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantEditPatient.js" afterPath="$PROJECT_DIR$/app/Components/ComposantEditPatient.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" afterPath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantMapsInfirmier.js" afterPath="$PROJECT_DIR$/app/Components/ComposantMapsInfirmier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantMaps.js" afterPath="$PROJECT_DIR$/app/Components/ComposantMaps.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" afterPath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantSecretaire.js" afterPath="$PROJECT_DIR$/app/Components/ComposantSecretaire.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/cabinetMedicalService.js" afterPath="$PROJECT_DIR$/app/Services/cabinetMedicalService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cabinetMedicalModule.js" afterPath="$PROJECT_DIR$/app/cabinetMedicalModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/secretary.css" afterPath="$PROJECT_DIR$/css/secretary.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/cabinetInfirmier.xml" afterPath="$PROJECT_DIR$/data/cabinetInfirmier.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/systemjs.config.js" afterPath="$PROJECT_DIR$/systemjs.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantMapsInfirmier.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantMapsInfirmier.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" afterPath="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Views/edit.patient.html" afterPath="$PROJECT_DIR$/ts/Views/edit.patient.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" afterPath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typings.json" afterPath="$PROJECT_DIR$/typings.json" />
     </list>
     <ignored path="L3M-Projet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,7 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="secretary.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComposantMaps.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding>
+                <marker date="1479747120717" expanded="true" signature="539:550" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="secretary.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/secretary.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -123,29 +116,19 @@
       <file leaf-file-name="ComposantOnlyPatient.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+            <state relative-caret-position="313">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
-                <marker date="1479746870683" expanded="true" signature="336:1119" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="364:1042" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="377:469" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="482:580" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="593:714" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="727:826" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="839:942" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="955:1029" ph="..." />
-                <marker date="1479746870683" expanded="true" signature="1155:1241" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="336:1119" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="364:1042" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="377:469" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="482:580" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="593:714" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="727:826" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="839:942" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="955:1029" ph="..." />
+                <marker date="1479747144738" expanded="true" signature="1155:1241" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="systemjs.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systemjs.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -165,23 +148,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComposantInfirmier.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ComposantInfirmier.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1479744582348" expanded="true" signature="259:2253" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="300:468" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="506:574" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="615:2118" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="697:2103" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="718:962" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="1009:2082" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="1421:2060" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="1486:1722" ph="..." />
-                <marker date="1479744582348" expanded="true" signature="1791:2034" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="259:2253" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="300:468" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="506:574" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="615:2118" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="697:2103" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="718:962" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="1009:2082" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="1421:2060" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="1486:1722" ph="..." />
+                <marker date="1479747279492" expanded="true" signature="1791:2034" ph="..." />
               </folding>
             </state>
           </provider>
@@ -201,6 +184,7 @@
     <findStrings>
       <find>identi</find>
       <find>table-i</find>
+      <find>ajouter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -223,7 +207,6 @@
         <option value="$PROJECT_DIR$/ts/secretary.ts" />
         <option value="$PROJECT_DIR$/secretary.html" />
         <option value="$PROJECT_DIR$/ts/Modules/routing.module.ts" />
-        <option value="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantEditPatient.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantAddPatient.ts" />
         <option value="$PROJECT_DIR$/ts/Components/Abstract.ComposantPatient.ts" />
@@ -232,12 +215,13 @@
         <option value="$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts" />
         <option value="$PROJECT_DIR$/systemjs.config.js" />
         <option value="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
-        <option value="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
         <option value="$PROJECT_DIR$/data/cabinetInfirmier.xml" />
         <option value="$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts" />
         <option value="$PROJECT_DIR$/ts/Components/ComposantMapsInfirmier.ts" />
-        <option value="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
         <option value="$PROJECT_DIR$/css/secretary.css" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
+        <option value="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
       </list>
     </option>
   </component>
@@ -492,12 +476,12 @@
       <workItem from="1479237419525" duration="6209000" />
       <workItem from="1479606474723" duration="69000" />
       <workItem from="1479606626762" duration="2154000" />
-      <workItem from="1479732627286" duration="11613000" />
+      <workItem from="1479732627286" duration="11974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108020000" />
+    <option name="totallyTimeSpent" value="108381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/secretary.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -844,26 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1479744582348" expanded="true" signature="259:2253" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="300:468" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="506:574" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="615:2118" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="697:2103" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="718:962" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="1009:2082" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="1421:2060" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="1486:1722" ph="..." />
-            <marker date="1479744582348" expanded="true" signature="1791:2034" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
@@ -901,6 +858,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/secretary.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMapsInfirmier.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -914,29 +879,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        <state relative-caret-position="1207">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
-            <marker date="1479746870683" expanded="true" signature="336:1119" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="364:1042" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="377:469" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="482:580" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="593:714" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="727:826" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="839:942" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="955:1029" ph="..." />
-            <marker date="1479746870683" expanded="true" signature="1155:1241" ph="..." />
+            <marker date="1479747120717" expanded="true" signature="539:550" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/secretary.css">
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="313">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <marker date="1479747144738" expanded="true" signature="336:1119" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="364:1042" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="377:469" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="482:580" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="593:714" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="727:826" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="839:942" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="955:1029" ph="..." />
+            <marker date="1479747144738" expanded="true" signature="1155:1241" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1479747279492" expanded="true" signature="259:2253" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="300:468" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="506:574" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="615:2118" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="697:2103" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="718:962" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="1009:2082" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="1421:2060" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="1486:1722" ph="..." />
+            <marker date="1479747279492" expanded="true" signature="1791:2034" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

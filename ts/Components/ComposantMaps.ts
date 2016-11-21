@@ -32,10 +32,8 @@ export class ComposantMaps implements OnInit {
                 zoom: 12
             });
             this.map.addListener("click", (event: any) => {
-                console.log(event);
                 this.geocoder.geocode( { "location": event.latLng}, (results, status) => {
                     if (status === google.maps.GeocoderStatus.OK) {
-                        console.log(results);
                         if (this.marker) {
                             this.marker.setMap(null);
                         }
@@ -53,7 +51,6 @@ export class ComposantMaps implements OnInit {
             });
             this.geocoder.geocode( { "address": "Grenoble"}, (results, status) => {
                 if (status === google.maps.GeocoderStatus.OK) {
-                    console.log(results);
                     let lat = results[0].geometry.viewport.getCenter().lat();
                     let lng = results[0].geometry.viewport.getCenter().lng();
                     this.map.setCenter({lat: lat, lng: lng});
@@ -91,12 +88,10 @@ export class ComposantMaps implements OnInit {
         if (this.composant instanceof ComposantEditPatient) {
             this.composant.setAdresse((<ComposantEditPatient>this.composant).patient.adresse);
             let patient : PatientInterface = (<ComposantEditPatient>this.composant).patient;
-            console.log(patient);
             let adresse : string =  patient.adresse.ville + " "
                 + patient.adresse.rue + " "
                 + patient.adresse.codePostal + " "
                 + patient.adresse.numero;
-            console.log("Init patient address : " + adresse);
             this.geocode(adresse);
         }
     }
@@ -111,7 +106,6 @@ export class ComposantMaps implements OnInit {
     public geocode(address : string) {
         this.geocoder.geocode( { "address": address}, (results, status) => {
             if (status === google.maps.GeocoderStatus.OK) {
-                console.log(results);
                 if (this.marker) {
                     this.marker.setMap(null);
                 }
