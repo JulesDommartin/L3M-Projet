@@ -53,7 +53,7 @@
                 n°1 ce jour là.
                 Lors de la dernière visite, l'intervenant doit aussi enlever les 25 points de suture de son opération.
                 -->
-                <visite date="2014-12-08" intervenant="002">
+                <visite date="2014-12-08" intervenant="001">
                     <acte id="109"/>               
                 </visite>
                 
@@ -125,7 +125,7 @@
                 Le jeune Xavier est en cours de désensibilation alergique.
                 Il doit recevoir tous les jours, l'injection de plusieurs allergènes, etc.
                 -->
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="002">
                     <acte id="111"/>               
                 </visite>
                 
@@ -144,10 +144,10 @@
                 <ville>Montbonnot-Saint-Martin</ville>
                 <codePostal>38330</codePostal>
             </adresse>
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="003">
                     <acte id="401"/>
                 </visite>
                 
         </patient>
-    <patient><nom>Dujardin</nom><prénom>Jean</prénom><numéro>46593154354531</numéro><sexe>M</sexe><naissance/><visite date="2014-12-08" intervenant="003"/><adresse><étage/><numéro>73</numéro><rue>Rue d'Alembert</rue><ville>Grenoble</ville><codePostal>38000</codePostal></adresse></patient></patients>
+    <patient><nom>Dujardin</nom><prénom>Jean</prénom><numéro>122545545</numéro><sexe>M</sexe><naissance></naissance><visite date="2014-12-08" intervenant="003"/><adresse><étage></étage><numéro>8</numéro><rue>Rue Elisée Chatin</rue><ville>Grenoble</ville><codePostal>38100</codePostal></adresse></patient><patient><nom>Maxim</nom><prénom>Jean</prénom><numéro>5435345457</numéro><sexe>F</sexe><naissance></naissance><visite date="2014-12-08" intervenant="002"/><adresse><étage></étage><numéro>8</numéro><rue>Le Chenavas</rue><ville>Revel</ville><codePostal>38420</codePostal></adresse></patient></patients>
 </cabinet>

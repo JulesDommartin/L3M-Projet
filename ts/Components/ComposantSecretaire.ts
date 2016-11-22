@@ -3,6 +3,8 @@ import {Component, OnInit} from "@angular/core";
 import {InfirmierInterface} from "@Services/cabinetMedicalService";
 import {PatientInterface} from "@Services/cabinetMedicalService";
 import {Router} from "@angular/router";
+import {NotificationsService} from "angular2-notifications";
+
 
 const htmlTemplate = `
     <p *ngIf="!initDone">CHARGEMENT...</p>
@@ -28,6 +30,8 @@ const htmlTemplate = `
             <composant-patient [patient]="patient" [alx-draggable]="patient"></composant-patient>
         </div>
         
+        <simple-notifications [options]="options"></simple-notifications>
+        
     </section>
 `;
 @Component({
@@ -38,16 +42,27 @@ export class ComposantSecretaire implements OnInit {
     public cabinet                              : NF.CabinetInterface;
     public addPatient                           : boolean = false;
     public adresse                              : any = {};
+    public options                              : any = {
+        position: ["bottom", "right"],
+        timeOut: 5000,
+    };
     this = this;
-    constructor		(public cms: NF.ServiceCabinetMedical, private router : Router) { // Ce composant dépend du service de cabinet médical
-    }
+    constructor		(
+        public cms: NF.ServiceCabinetMedical,
+        private router : Router,
+        public _service : NotificationsService
+    ) {} // Ce composant dépend du service de cabinet médical
+
     ngOnInit() {
         //console.log("Appelez le service pour formatter et obtenir les données du cabinet\n", this);
         this.cms.getData( "/data/cabinetInfirmier.xml" ).then( (cabinet: NF.CabinetInterface) => {
-            console.log( "\t=> cabinetJS:", cabinet );
+            //console.log( "\t=> cabinetJS:", cabinet );
             this.cabinet = cabinet;
             this.initDone = true;
-        }, (err) => {console.error("Erreur lors du chargement du cabinet", "/data/cabinetInfirmier.xml", "\n", err);});
+        }, (err) => {
+            console.error("Erreur lors du chargement du cabinet", "/data/cabinetInfirmier.xml", "\n", err);
+            this._service.error("Erreur", err);
+        });
     }
 
     public acceptPatient = (data) => {

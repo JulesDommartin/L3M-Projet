@@ -22,11 +22,13 @@
             // other libraries
             'rxjs':                       'npm:rxjs',
             'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-            'moment': 'node_modules/moment/moment.js',
+            'moment': 'npm:moment/moment.js',
+            'angular2-moment':'npm:angular2-moment',
             'ng2-bootstrap/ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
             'angular2-google-maps/core': 'npm:angular2-google-maps/core',
-            'angular2-fontawesome': 'node_modules/angular2-fontawesome',
-            '@google/maps':'npm:@google/maps/lib/'
+            'angular2-fontawesome': 'npm:angular2-fontawesome',
+            '@google/maps':'npm:@google/maps/lib/',
+            'angular2-notifications': 'npm:angular2-notifications'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -46,6 +48,14 @@
                 defaultExtension: 'js'
             },
             'angular2-fontawesome': {
+                defaultExtension: 'js'
+            },
+            'angular2-notifications': {
+                main: 'components.js',
+                defaultExtension: 'js'
+            },
+            'angular2-moment': {
+                main: './index.js',
                 defaultExtension: 'js'
             }
         }

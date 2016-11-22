@@ -21,7 +21,7 @@ const htmlTemplate = `
         </tr>
         <tr>
             <td><b>Sexe :</b></td>
-            <td>{{patient.sexe || ""}}</td>
+            <td>{{getLitteralPatientSexe()}}</td>
         </tr>
         <tr>
             <td><b>Naissance :</b></td>
@@ -37,7 +37,9 @@ const htmlTemplate = `
         <br/>
         <br/>
     </div>
-    <a [routerLink]="['/secretaire']">Retour</a>
+    <div class="div-bouton-retour">
+        <a class="bouton-retour" [routerLink]="['/secretaire']">Retour</a>
+    </div>
 `;
 @Component({
     template	: htmlTemplate
@@ -53,11 +55,9 @@ export class ComposantOnlyPatient implements OnInit {
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
             this.numero = params["numero"];
-            console.log(params);
         });
         this.cms.getPatientById(this.numero).then((res) => {
             this.patient = res;
-            console.log(res);
             this.__loader.load().then(() => {
                 this.geocoder   = new google.maps.Geocoder();
                 this.infoWindow = new google.maps.InfoWindow();
@@ -68,7 +68,6 @@ export class ComposantOnlyPatient implements OnInit {
                     + this.patient.adresse.numero + " "
                     + this.patient.adresse.rue + " "
                     + this.patient.adresse.codePostal;
-                console.log(patientAdresse);
                 this.geocoder.geocode( { "address": patientAdresse}, (results, status) => {
                     if (status === google.maps.GeocoderStatus.OK) {
                         this.marker = new google.maps.Marker({
@@ -84,5 +83,17 @@ export class ComposantOnlyPatient implements OnInit {
                 });
             });
         });
+    }
+
+    getLitteralPatientSexe() {
+        if (this.patient) {
+            if (this.patient.sexe === 0) {
+                return "Homme";
+            } else if (this.patient.sexe === 1) {
+                return "Femme";
+            } else {
+                return "?";
+            }
+        }
     }
 }
