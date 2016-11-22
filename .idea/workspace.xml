@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5ab7b1-5694-4390-b0be-0b284046ef4d" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ts/Modules/routing.module.ts" afterPath="$PROJECT_DIR$/ts/Routes/routing.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" afterPath="$PROJECT_DIR$/app/Components/ComposantInfirmier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantMaps.js" afterPath="$PROJECT_DIR$/app/Components/ComposantMaps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" afterPath="$PROJECT_DIR$/app/Components/ComposantOnlyPatient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantMaps.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" afterPath="$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cabinetMedicalModule.js" afterPath="$PROJECT_DIR$/app/cabinetMedicalModule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" afterPath="$PROJECT_DIR$/ts/cabinetMedicalModule.ts" />
     </list>
     <ignored path="L3M-Projet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,128 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cabinetMedicalModule.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/cabinetMedicalModule.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComposantMapsInfirmier.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMapsInfirmier.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-                <marker date="1479746536540" expanded="true" signature="270:505" ph="..." />
-                <marker date="1479746536540" expanded="true" signature="337:352" ph="..." />
-                <marker date="1479746536540" expanded="true" signature="383:494" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComposantMaps.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantMaps.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-              <folding>
-                <marker date="1479747120717" expanded="true" signature="539:550" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secretary.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/secretary.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serverCabinetMedical.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cabinetMedicalService.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Services/cabinetMedicalService.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1479746508825" expanded="true" signature="3122:3161" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cabinetInfirmier.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/cabinetInfirmier.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2228">
-              <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComposantOnlyPatient.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantOnlyPatient.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding>
-                <marker date="1479747144738" expanded="true" signature="336:1119" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="364:1042" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="377:469" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="482:580" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="593:714" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="727:826" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="839:942" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="955:1029" ph="..." />
-                <marker date="1479747144738" expanded="true" signature="1155:1241" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComposantSecretaire.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/Components/ComposantSecretaire.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-                <marker date="1479741908446" expanded="true" signature="467:1578" ph="..." />
-                <marker date="1479741908446" expanded="true" signature="766:1219" ph="..." />
-                <marker date="1479741908446" expanded="true" signature="1358:1471" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ComposantInfirmier.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="-85">
+              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
                 <marker date="1479747279492" expanded="true" signature="259:2253" ph="..." />
@@ -298,6 +178,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3M-Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3M-Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,12 +374,12 @@
       <workItem from="1479237419525" duration="6209000" />
       <workItem from="1479606474723" duration="69000" />
       <workItem from="1479606626762" duration="2154000" />
-      <workItem from="1479732627286" duration="11974000" />
+      <workItem from="1479732627286" duration="14455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108381000" />
+    <option name="totallyTimeSpent" value="110862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,15 +395,15 @@
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.6204819" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.62262154" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.4960464" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29809725" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29809725" sideWeight="0.50208336" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.412595" sideWeight="0.50395364" order="8" side_tool="true" content_ui="tabs" x="16" y="596" width="1901" height="287" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.37951806" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.37737843" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -678,7 +576,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Modules/routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/ts/Routes/routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
@@ -821,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/cabinetInfirmier.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2228">
@@ -907,10 +797,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/serverCabinetMedical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="101" column="79" lean-forward="true" selection-start-line="101" selection-start-column="79" selection-end-line="101" selection-end-column="79" />
+          <caret line="102" column="75" lean-forward="true" selection-start-line="102" selection-start-column="75" selection-end-line="102" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ts/Components/ComposantInfirmier.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="-85">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
             <marker date="1479747279492" expanded="true" signature="259:2253" ph="..." />

@@ -16,7 +16,7 @@ import { ComposantMapsInfirmier }   from "./Components/ComposantMapsInfirmier";
 
 import { ServiceCabinetMedical }    from "@Services/cabinetMedicalService";
 
-import { AppRoutingModule }         from "./Modules/routing.module";
+import { AppRoutingModule }         from "./Routes/routing.module";
 
 import { SimpleNotificationsModule }from "angular2-notifications";
 
