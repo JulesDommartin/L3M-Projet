@@ -31,6 +31,7 @@
     "google-maps-geocoder": "^1.0.1",
     "http-static-gzip-regexp": "0.0.2",
     "ionicons": "^3.0.0",
+    "libxmljs": "^0.18.0",
     "multer": "^1.2.0",
     "ng2-bootstrap": "^1.1.14",
     "reflect-metadata": "^0.1.8",

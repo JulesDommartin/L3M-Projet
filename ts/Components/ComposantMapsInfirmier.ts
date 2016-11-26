@@ -45,56 +45,26 @@ export class ComposantMapsInfirmier implements OnInit {
     public getTrip() {
         this.positions = [];
         this.directionDisplay = new google.maps.DirectionsRenderer();
-        let promises : Promise<google.maps.GeocoderResult[]>[] = [];
         let adresseCabinet = this.cms.cabinetAdresse.numero + " "
             + this.cms.cabinetAdresse.rue + " "
             + this.cms.cabinetAdresse.ville + " "
             + this.cms.cabinetAdresse.codePostal;
-        let promise = new Promise((resolve, reject) => {
+        this.cms.Promesse.then( () => {
             this.geocoder.geocode({"address": adresseCabinet},
                 (results : google.maps.GeocoderResult[], status : google.maps.GeocoderStatus) => {
                     if (status === google.maps.GeocoderStatus.OK) {
-                        resolve(results);
+                        this.positions.push({"location" : results[0].geometry.location});
+                        this.infirmier.patients.forEach((val) => {
+                            this.positions.push({"location" : val.adresse.latlng});
+                        });
+                        this.displayMapDirection();
                     } else {
-                        reject(status);
+                        console.error(status);
                     }
                 }
             );
         });
-        promises.push(promise);
-        for (let patient of this.infirmier.patients) {
-            let adresse : string =  patient.adresse.ville + " "
-                + patient.adresse.rue + " "
-                + patient.adresse.codePostal + " "
-                + patient.adresse.numero;
-            let promise = new Promise((resolve, reject) => {
-                this.geocoder.geocode({"address": adresse},
-                    (results : google.maps.GeocoderResult[], status : google.maps.GeocoderStatus) => {
-                        if (status === google.maps.GeocoderStatus.OK) {
-                            resolve(results);
-                        } else {
-                            reject(status);
-                        }
-                    }
-                );
-            });
-            promises.push(promise);
-        }
-        Promise.all(promises).then( (res : Array<google.maps.GeocoderResult[]>) => {
-            if (res.length === 1) {
-                console.log("Aucun patient");
-            } else {
-                for (let obj of res) {
-                    this.positions.push({"location" : obj[0].geometry.location});
-                }
-                this.displayMapDirection();
-            }
-
-
-        })
-        .catch( (err) => {
-            console.log(err);
-        });
+        //this.execPromise(promises, 0);
     }
 
     setMarkerForOnePatient(result : google.maps.GeocoderResult) {
@@ -186,9 +156,9 @@ export class ComposantMapsInfirmier implements OnInit {
         if (minutes < 10) {minutes_string = "0"+minutes.toString();}  else {minutes_string = minutes.toString();}
 
         if (hours === 0) {
-            return minutes_string + "m";
+            return minutes_string + "mn";
         } else {
-            return hours_string + "h " + minutes_string + "m";
+            return hours_string + "h " + minutes_string + "mn";
         }
     }
 

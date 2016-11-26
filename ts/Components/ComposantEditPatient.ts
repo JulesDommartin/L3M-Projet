@@ -85,7 +85,8 @@ export class ComposantEditPatient extends AbstractComposantPatient implements On
                         codePostal:         dataPatient.patientPostalCode   || null,
                         rue:                dataPatient.patientStreet       || "",
                         numero:             dataPatient.patientStreetNumber || null,
-                        etage:              dataPatient.patientFloor        || ""
+                        etage:              dataPatient.patientFloor        || "",
+                        latlng:             undefined,
                     }
                 };
                 let infId = null;
