@@ -26,43 +26,47 @@ System.register(["@Services/cabinetMedicalService", "@angular/core", "@angular/r
         execute: function() {
             htmlTemplate = `
     <div class="infirmier">
-        <div class="identite-infirmier">
-            <span>Infirmier numéro : <i>{{infirmier.id}}</i></span>
-            <h4>{{infirmier.nom}}</h4>
-            <span>{{infirmier.prenom}}</span>
-        </div>
-        <div class="photo-infirmier">
-            <img src="../data/{{infirmier.photo}}"/>
-        </div>
-        <div class="patients-infirmier">
-            <table *ngIf="infirmier.patients.length > 0" class="table-infirmier">
-                <tr>
-                    <th class="nom">Nom</th>
-                    <th class="prenom">Prénom</th>
-                    <th class="num-secu">Numéro de sécurité sociale</th>
-                    <th class="options">Options</th>
-                </tr>
-                <tr class="patient-infirmier" 
-                        (click)="onClick(patient)" 
-                        *ngFor="let patient of infirmier.patients" 
-                        [alx-draggable]="patient">
-                    <td class="nom">{{patient.nom}}</td>
-                    <td class="prenom">{{patient.prenom}}</td>
-                    <td class="num-secu">{{patient.numeroSecuriteSociale}}</td>
-                    <td class="options">
-                        <span title="Voir les infos du patient" 
-                                alt="Voir les infos du patient" 
-                                (click)="viewPatient(patient.numeroSecuriteSociale)">
-                            <fa [name]="'eye'"></fa>
-                        </span>
-                        <span title="Modifier les infos du patient" 
-                                alt="Modifier les infos du patient" 
-                                (click)="editPatient(patient.numeroSecuriteSociale)">
-                            <fa [name]="'pencil'"></fa>
-                        </span>
-                    </td>
-                </tr>
-            </table>
+        <div class="information-infirmier">
+             <div class="id-photo">
+                <div class="identite-infirmier">
+                    <span>Infirmier numéro : <i>{{infirmier.id}}</i></span>
+                    <h4>{{infirmier.nom}}</h4>
+                    <span>{{infirmier.prenom}}</span>
+                </div>
+                <div class="photo-infirmier">
+                    <img src="../data/{{infirmier.photo}}"/>
+                </div>
+             </div>
+            <div class="patients-infirmier">
+                <table *ngIf="infirmier.patients.length > 0" class="table-infirmier">
+                    <tr>
+                        <th class="nom">Nom</th>
+                        <th class="prenom">Prénom</th>
+                        <th class="num-secu">Numéro de sécurité sociale</th>
+                        <th class="options">Options</th>
+                    </tr>
+                    <tr class="patient-infirmier" 
+                            (click)="onClick(patient)" 
+                            *ngFor="let patient of infirmier.patients" 
+                            [alx-draggable]="patient">
+                        <td class="nom">{{patient.nom}}</td>
+                        <td class="prenom">{{patient.prenom}}</td>
+                        <td class="num-secu">{{patient.numeroSecuriteSociale}}</td>
+                        <td class="options">
+                            <span title="Voir les infos du patient" 
+                                    alt="Voir les infos du patient" 
+                                    (click)="viewPatient(patient.numeroSecuriteSociale)">
+                                <fa [name]="'eye'"></fa>
+                            </span>
+                            <span title="Modifier les infos du patient" 
+                                    alt="Modifier les infos du patient" 
+                                    (click)="editPatient(patient.numeroSecuriteSociale)">
+                                <fa [name]="'pencil'"></fa>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <composant-maps-infirmier *ngIf="infirmier.patients.length > 0" [infirmier]="infirmier"></composant-maps-infirmier>
     </div>
@@ -102,4 +106,4 @@ System.register(["@Services/cabinetMedicalService", "@angular/core", "@angular/r
     }
 });
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbXBvbmVudHMvQ29tcG9zYW50SW5maXJtaWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7UUFLTSxZQUFZOzs7Ozs7Ozs7Ozs7O1lBQVosWUFBWSxHQUFHOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Q0EwQ3BCLENBQUM7WUFNRjtnQkFJSSxZQUFvQixNQUFlO29CQUFmLFdBQU0sR0FBTixNQUFNLENBQVM7Z0JBQ25DLENBQUM7Z0JBRUQsT0FBTyxDQUFDLE9BQXlCO29CQUM3QixJQUFJLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLFVBQVUsRUFBRSxPQUFPLENBQUMscUJBQXFCLENBQUMsQ0FBQyxDQUFDO2dCQUN0RSxDQUFDO2dCQUVELFdBQVcsQ0FBQyxNQUFlO29CQUN2QixJQUFJLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLFVBQVUsRUFBRSxNQUFNLENBQUMsQ0FBQyxDQUFDO2dCQUMvQyxDQUFDO2dCQUVELFdBQVcsQ0FBQyxNQUFlO29CQUN2QixJQUFJLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLGNBQWMsRUFBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO2dCQUNsRCxDQUFDO1lBRUwsQ0FBQztZQWxCRztnQkFBQyxZQUFLLEVBQUU7O2lFQUFBO1lBQ1I7Z0JBQUMsWUFBSyxFQUFFOzsrREFBQTtZQVBaO2dCQUFDLGdCQUFTLENBQUM7b0JBQ1AsUUFBUSxFQUFHLHFCQUFxQjtvQkFDaEMsUUFBUSxFQUFHLFlBQVk7b0JBQ3ZCLFNBQVMsRUFBSyxDQUFDLGdEQUFnRCxDQUFDO2lCQUNuRSxDQUFDOztrQ0FBQTtZQUNGLG1EQW1CQyxDQUFBIiwiZmlsZSI6IkNvbXBvbmVudHMvQ29tcG9zYW50SW5maXJtaWVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgTkYgZnJvbSBcIkBTZXJ2aWNlcy9jYWJpbmV0TWVkaWNhbFNlcnZpY2VcIjtcbmltcG9ydCB7Q29tcG9uZW50LCBJbnB1dH0gZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcbmltcG9ydCB7UGF0aWVudEludGVyZmFjZX0gZnJvbSBcIkBTZXJ2aWNlcy9jYWJpbmV0TWVkaWNhbFNlcnZpY2VcIjtcbmltcG9ydCB7Um91dGVyfSBmcm9tIFwiQGFuZ3VsYXIvcm91dGVyXCI7XG5cbmNvbnN0IGh0bWxUZW1wbGF0ZSA9IGBcbiAgICA8ZGl2IGNsYXNzPVwiaW5maXJtaWVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJpZGVudGl0ZS1pbmZpcm1pZXJcIj5cbiAgICAgICAgICAgIDxzcGFuPkluZmlybWllciBudW3DqXJvIDogPGk+e3tpbmZpcm1pZXIuaWR9fTwvaT48L3NwYW4+XG4gICAgICAgICAgICA8aDQ+e3tpbmZpcm1pZXIubm9tfX08L2g0PlxuICAgICAgICAgICAgPHNwYW4+e3tpbmZpcm1pZXIucHJlbm9tfX08L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzPVwicGhvdG8taW5maXJtaWVyXCI+XG4gICAgICAgICAgICA8aW1nIHNyYz1cIi4uL2RhdGEve3tpbmZpcm1pZXIucGhvdG99fVwiLz5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJwYXRpZW50cy1pbmZpcm1pZXJcIj5cbiAgICAgICAgICAgIDx0YWJsZSAqbmdJZj1cImluZmlybWllci5wYXRpZW50cy5sZW5ndGggPiAwXCIgY2xhc3M9XCJ0YWJsZS1pbmZpcm1pZXJcIj5cbiAgICAgICAgICAgICAgICA8dHI+XG4gICAgICAgICAgICAgICAgICAgIDx0aCBjbGFzcz1cIm5vbVwiPk5vbTwvdGg+XG4gICAgICAgICAgICAgICAgICAgIDx0aCBjbGFzcz1cInByZW5vbVwiPlByw6lub208L3RoPlxuICAgICAgICAgICAgICAgICAgICA8dGggY2xhc3M9XCJudW0tc2VjdVwiPk51bcOpcm8gZGUgc8OpY3VyaXTDqSBzb2NpYWxlPC90aD5cbiAgICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzPVwib3B0aW9uc1wiPk9wdGlvbnM8L3RoPlxuICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgPHRyIGNsYXNzPVwicGF0aWVudC1pbmZpcm1pZXJcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgIChjbGljayk9XCJvbkNsaWNrKHBhdGllbnQpXCIgXG4gICAgICAgICAgICAgICAgICAgICAgICAqbmdGb3I9XCJsZXQgcGF0aWVudCBvZiBpbmZpcm1pZXIucGF0aWVudHNcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgIFthbHgtZHJhZ2dhYmxlXT1cInBhdGllbnRcIj5cbiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPVwibm9tXCI+e3twYXRpZW50Lm5vbX19PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPVwicHJlbm9tXCI+e3twYXRpZW50LnByZW5vbX19PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPVwibnVtLXNlY3VcIj57e3BhdGllbnQubnVtZXJvU2VjdXJpdGVTb2NpYWxlfX08L3RkPlxuICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9XCJvcHRpb25zXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiB0aXRsZT1cIlZvaXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWx0PVwiVm9pciBsZXMgaW5mb3MgZHUgcGF0aWVudFwiIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAoY2xpY2spPVwidmlld1BhdGllbnQocGF0aWVudC5udW1lcm9TZWN1cml0ZVNvY2lhbGUpXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGZhIFtuYW1lXT1cIidleWUnXCI+PC9mYT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIHRpdGxlPVwiTW9kaWZpZXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWx0PVwiTW9kaWZpZXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGNsaWNrKT1cImVkaXRQYXRpZW50KHBhdGllbnQubnVtZXJvU2VjdXJpdGVTb2NpYWxlKVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxmYSBbbmFtZV09XCIncGVuY2lsJ1wiPjwvZmE+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvdGQ+XG4gICAgICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICAgIDwvdGFibGU+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8Y29tcG9zYW50LW1hcHMtaW5maXJtaWVyICpuZ0lmPVwiaW5maXJtaWVyLnBhdGllbnRzLmxlbmd0aCA+IDBcIiBbaW5maXJtaWVyXT1cImluZmlybWllclwiPjwvY29tcG9zYW50LW1hcHMtaW5maXJtaWVyPlxuICAgIDwvZGl2PlxuYDtcbkBDb21wb25lbnQoe1xuICAgIHNlbGVjdG9yXHQ6IFwiY29tcG9zYW50LWluZmlybWllclwiLFxuICAgIHRlbXBsYXRlXHQ6IGh0bWxUZW1wbGF0ZSxcbiAgICBzdHlsZVVybHMgICA6IFtcIm5vZGVfbW9kdWxlcy9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5jc3NcIl1cbn0pXG5leHBvcnQgY2xhc3MgQ29tcG9zYW50SW5maXJtaWVyIHtcbiAgICBASW5wdXQoKSBpbmZpcm1pZXIgIDogTkYuSW5maXJtaWVySW50ZXJmYWNlO1xuICAgIEBJbnB1dCgpIGNhYmluZXQgICAgOiBORi5DYWJpbmV0SW50ZXJmYWNlO1xuXG4gICAgY29uc3RydWN0b3IocHJpdmF0ZSByb3V0ZXIgOiBSb3V0ZXIpIHtcbiAgICB9XG5cbiAgICBvbkNsaWNrKHBhdGllbnQ6IFBhdGllbnRJbnRlcmZhY2UpIHtcbiAgICAgICAgdGhpcy5yb3V0ZXIubmF2aWdhdGUoW1wiL3BhdGllbnRcIiwgcGF0aWVudC5udW1lcm9TZWN1cml0ZVNvY2lhbGVdKTtcbiAgICB9XG5cbiAgICB2aWV3UGF0aWVudChudW1lcm8gOiBzdHJpbmcpIHtcbiAgICAgICAgdGhpcy5yb3V0ZXIubmF2aWdhdGUoW1wiL3BhdGllbnRcIiwgbnVtZXJvXSk7XG4gICAgfVxuXG4gICAgZWRpdFBhdGllbnQobnVtZXJvIDogc3RyaW5nKSB7XG4gICAgICAgIHRoaXMucm91dGVyLm5hdmlnYXRlKFtcIi9lZGl0UGF0aWVudFwiLG51bWVyb10pO1xuICAgIH1cblxufVxuXG5cbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbXBvbmVudHMvQ29tcG9zYW50SW5maXJtaWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7UUFLTSxZQUFZOzs7Ozs7Ozs7Ozs7O1lBQVosWUFBWSxHQUFHOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0NBOENwQixDQUFDO1lBTUY7Z0JBSUksWUFBb0IsTUFBZTtvQkFBZixXQUFNLEdBQU4sTUFBTSxDQUFTO2dCQUNuQyxDQUFDO2dCQUVELE9BQU8sQ0FBQyxPQUF5QjtvQkFDN0IsSUFBSSxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsQ0FBQyxVQUFVLEVBQUUsT0FBTyxDQUFDLHFCQUFxQixDQUFDLENBQUMsQ0FBQztnQkFDdEUsQ0FBQztnQkFFRCxXQUFXLENBQUMsTUFBZTtvQkFDdkIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsQ0FBQyxVQUFVLEVBQUUsTUFBTSxDQUFDLENBQUMsQ0FBQztnQkFDL0MsQ0FBQztnQkFFRCxXQUFXLENBQUMsTUFBZTtvQkFDdkIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsQ0FBQyxjQUFjLEVBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQztnQkFDbEQsQ0FBQztZQUVMLENBQUM7WUFsQkc7Z0JBQUMsWUFBSyxFQUFFOztpRUFBQTtZQUNSO2dCQUFDLFlBQUssRUFBRTs7K0RBQUE7WUFQWjtnQkFBQyxnQkFBUyxDQUFDO29CQUNQLFFBQVEsRUFBRyxxQkFBcUI7b0JBQ2hDLFFBQVEsRUFBRyxZQUFZO29CQUN2QixTQUFTLEVBQUssQ0FBQyxnREFBZ0QsQ0FBQztpQkFDbkUsQ0FBQzs7a0NBQUE7WUFDRixtREFtQkMsQ0FBQSIsImZpbGUiOiJDb21wb25lbnRzL0NvbXBvc2FudEluZmlybWllci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIE5GIGZyb20gXCJAU2VydmljZXMvY2FiaW5ldE1lZGljYWxTZXJ2aWNlXCI7XG5pbXBvcnQge0NvbXBvbmVudCwgSW5wdXR9IGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XG5pbXBvcnQge1BhdGllbnRJbnRlcmZhY2V9IGZyb20gXCJAU2VydmljZXMvY2FiaW5ldE1lZGljYWxTZXJ2aWNlXCI7XG5pbXBvcnQge1JvdXRlcn0gZnJvbSBcIkBhbmd1bGFyL3JvdXRlclwiO1xuXG5jb25zdCBodG1sVGVtcGxhdGUgPSBgXG4gICAgPGRpdiBjbGFzcz1cImluZmlybWllclwiPlxuICAgICAgICA8ZGl2IGNsYXNzPVwiaW5mb3JtYXRpb24taW5maXJtaWVyXCI+XG4gICAgICAgICAgICAgPGRpdiBjbGFzcz1cImlkLXBob3RvXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImlkZW50aXRlLWluZmlybWllclwiPlxuICAgICAgICAgICAgICAgICAgICA8c3Bhbj5JbmZpcm1pZXIgbnVtw6lybyA6IDxpPnt7aW5maXJtaWVyLmlkfX08L2k+PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8aDQ+e3tpbmZpcm1pZXIubm9tfX08L2g0PlxuICAgICAgICAgICAgICAgICAgICA8c3Bhbj57e2luZmlybWllci5wcmVub219fTwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwicGhvdG8taW5maXJtaWVyXCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiLi4vZGF0YS97e2luZmlybWllci5waG90b319XCIvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInBhdGllbnRzLWluZmlybWllclwiPlxuICAgICAgICAgICAgICAgIDx0YWJsZSAqbmdJZj1cImluZmlybWllci5wYXRpZW50cy5sZW5ndGggPiAwXCIgY2xhc3M9XCJ0YWJsZS1pbmZpcm1pZXJcIj5cbiAgICAgICAgICAgICAgICAgICAgPHRyPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzPVwibm9tXCI+Tm9tPC90aD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDx0aCBjbGFzcz1cInByZW5vbVwiPlByw6lub208L3RoPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzPVwibnVtLXNlY3VcIj5OdW3DqXJvIGRlIHPDqWN1cml0w6kgc29jaWFsZTwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICA8dGggY2xhc3M9XCJvcHRpb25zXCI+T3B0aW9uczwvdGg+XG4gICAgICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz1cInBhdGllbnQtaW5maXJtaWVyXCIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgKGNsaWNrKT1cIm9uQ2xpY2socGF0aWVudClcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAqbmdGb3I9XCJsZXQgcGF0aWVudCBvZiBpbmZpcm1pZXIucGF0aWVudHNcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBbYWx4LWRyYWdnYWJsZV09XCJwYXRpZW50XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9XCJub21cIj57e3BhdGllbnQubm9tfX08L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPVwicHJlbm9tXCI+e3twYXRpZW50LnByZW5vbX19PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz1cIm51bS1zZWN1XCI+e3twYXRpZW50Lm51bWVyb1NlY3VyaXRlU29jaWFsZX19PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz1cIm9wdGlvbnNcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiB0aXRsZT1cIlZvaXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIlZvaXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChjbGljayk9XCJ2aWV3UGF0aWVudChwYXRpZW50Lm51bWVyb1NlY3VyaXRlU29jaWFsZSlcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGZhIFtuYW1lXT1cIidleWUnXCI+PC9mYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gdGl0bGU9XCJNb2RpZmllciBsZXMgaW5mb3MgZHUgcGF0aWVudFwiIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWx0PVwiTW9kaWZpZXIgbGVzIGluZm9zIGR1IHBhdGllbnRcIiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChjbGljayk9XCJlZGl0UGF0aWVudChwYXRpZW50Lm51bWVyb1NlY3VyaXRlU29jaWFsZSlcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGZhIFtuYW1lXT1cIidwZW5jaWwnXCI+PC9mYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3RkPlxuICAgICAgICAgICAgICAgICAgICA8L3RyPlxuICAgICAgICAgICAgICAgIDwvdGFibGU+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxjb21wb3NhbnQtbWFwcy1pbmZpcm1pZXIgKm5nSWY9XCJpbmZpcm1pZXIucGF0aWVudHMubGVuZ3RoID4gMFwiIFtpbmZpcm1pZXJdPVwiaW5maXJtaWVyXCI+PC9jb21wb3NhbnQtbWFwcy1pbmZpcm1pZXI+XG4gICAgPC9kaXY+XG5gO1xuQENvbXBvbmVudCh7XG4gICAgc2VsZWN0b3JcdDogXCJjb21wb3NhbnQtaW5maXJtaWVyXCIsXG4gICAgdGVtcGxhdGVcdDogaHRtbFRlbXBsYXRlLFxuICAgIHN0eWxlVXJscyAgIDogW1wibm9kZV9tb2R1bGVzL2ZvbnQtYXdlc29tZS9jc3MvZm9udC1hd2Vzb21lLmNzc1wiXVxufSlcbmV4cG9ydCBjbGFzcyBDb21wb3NhbnRJbmZpcm1pZXIge1xuICAgIEBJbnB1dCgpIGluZmlybWllciAgOiBORi5JbmZpcm1pZXJJbnRlcmZhY2U7XG4gICAgQElucHV0KCkgY2FiaW5ldCAgICA6IE5GLkNhYmluZXRJbnRlcmZhY2U7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcml2YXRlIHJvdXRlciA6IFJvdXRlcikge1xuICAgIH1cblxuICAgIG9uQ2xpY2socGF0aWVudDogUGF0aWVudEludGVyZmFjZSkge1xuICAgICAgICB0aGlzLnJvdXRlci5uYXZpZ2F0ZShbXCIvcGF0aWVudFwiLCBwYXRpZW50Lm51bWVyb1NlY3VyaXRlU29jaWFsZV0pO1xuICAgIH1cblxuICAgIHZpZXdQYXRpZW50KG51bWVybyA6IHN0cmluZykge1xuICAgICAgICB0aGlzLnJvdXRlci5uYXZpZ2F0ZShbXCIvcGF0aWVudFwiLCBudW1lcm9dKTtcbiAgICB9XG5cbiAgICBlZGl0UGF0aWVudChudW1lcm8gOiBzdHJpbmcpIHtcbiAgICAgICAgdGhpcy5yb3V0ZXIubmF2aWdhdGUoW1wiL2VkaXRQYXRpZW50XCIsbnVtZXJvXSk7XG4gICAgfVxuXG59XG5cblxuIl0sInNvdXJjZVJvb3QiOiIifQ==
